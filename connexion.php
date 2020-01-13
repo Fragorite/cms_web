@@ -67,29 +67,13 @@
          
     </head>
     <body>
-        <div class="container">
-            <h1>Connexion</h1>
-            <form action="" method="POST" class="connexion">
-                <div class="formConnexion">
-                    <label for="userNameConnect">Entrez votre pseudo: </label>
-                        <input type="text" name="userNameConnect" id="userNameConnect" required>
-                </div>
-                <div class="formPassWord">
-                    <label for="passWord">Entrez votre mot de passe :</label>
-                    <input type="password" name="passWordConnect" id="passWord" required>
-                </div>
-                <div class="form-example">
-                    <input type="submit" value="Envoyer" name="formConnect">
-                </div>
-            </form>
-        </div>
         <?php
-            if(isset($_GET['registred'])){
+            if(!isset($_GET['registred'])){
         ?>
         <div class="container">
                 <form action="" method="get" class="connexion">
                     <div class="formConnexion">
-                        <label for="userNameConnect">Entrez votre nom: </label>
+                        <label for="userNameConnect">Entrez votre pseudo: </label>
                             <input type="text" name="userNameConnect" id="userNameConnect" required>
                     </div>
                     <div class="formPassWord">
@@ -104,6 +88,9 @@
             <div class="form-example">
                 <a href="#">Inscrivez-vous!</a>
             </div>
+        <?php
+            } else {
+        ?>
             <div class="container">
             <h1>Inscription</h1>
             <form action="" method="POST" class="connexion">
