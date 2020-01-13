@@ -1,1 +1,3 @@
-TEST.php
+<?php
+    echo "test";
+?>
