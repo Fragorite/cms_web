@@ -1,5 +1,5 @@
 <?php
-    include('include/config.php');
+    include('includes/config.php');
     if(isset($_POST['formConnect'])){
         if(!empty($_POST['userNameConnect']) && !empty($_POST['passWordConnect'])){
             $userNameConnect = $_POST['userNameConnect'];
