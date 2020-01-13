@@ -1,0 +1,42 @@
+body{
+    background-color: darkblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container{
+    
+    background-color: azure;
+    padding: 1%;
+    width:30%;
+    height:20%;
+    text-align: left;  
+    border-radius: 10px;
+}
+h1{
+    text-align: center;
+}
+.formConnexion {
+	display: flex;
+    
+}
+
+.formConnexion input[type="text"]{
+    flex: 1 1 auto;
+}
+
+.formPassWord{
+	display: flex;
+    
+}
+.formPassWord input[type="password"]{
+    flex: 1 1 auto;
+}
+
+.error{
+    color:red;
+    font-weight: bold;
+        
+}
