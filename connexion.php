@@ -67,13 +67,13 @@
          
     </head>
     <body>
-<<<<<<< HEAD
+
         <div class="main">
-=======
+
         <?php
             if(!isset($_GET['registred'])){
         ?>
->>>>>>> c7e92d9d13b88e7d8be95e68b15cdb7457735a89
+
         <div class="container">
                 <form action="" method="get" class="connexion">
                     <div class="formConnexion">
@@ -90,7 +90,7 @@
                 </form>
             </div>
             <div class="form-example">
-<<<<<<< HEAD
+
                        <a href="#">Inscrivez-vous!</a>
                     </div>
             <div class="container" id="container2">
@@ -118,7 +118,7 @@
                 </form>
             </div>
             </div>
-=======
+
                 <a href="#">Inscrivez-vous!</a>
             </div>
         <?php
@@ -126,6 +126,35 @@
         ?>
             <div class="container">
             <h1>Inscription</h1>
+
+        <?php
+            if(!isset($_GET['registred'])){
+        ?>
+        <div class="container">
+            <h1>Connexion</h1>
+            <form action="" method="get" class="connexion">
+                <div class="formConnexion">
+                    <label for="userNameConnect">Entrez votre nom: </label>
+                        <input type="text" name="userNameConnect" id="userNameConnect" required>
+                </div>
+                <div class="formPassWord">
+                    <label for="passWord">Entrez votre mot de passe :</label>
+                    <input type="password" name="passWordConnect" id="passWord" required>
+                </div>
+                <div class="form-example">
+                    <input type="submit" value="Envoyer" name="formConnect">
+                </div>
+            </form>
+        </div>
+        <div class="form-example">
+            <a href="#">Inscrivez-vous!</a>
+        </div>
+        <?php
+            } else {
+        ?>
+        <div class="container">
+            <h1>Inscription</h1>
+
             <form action="" method="POST" class="connexion">
                 <div class="formConnexion">
                     <label for="userNameConnect">Entrez votre nom: </label>
@@ -151,5 +180,5 @@
         <?php
             }
         ?>
->>>>>>> c7e92d9d13b88e7d8be95e68b15cdb7457735a89
+
     </body>
