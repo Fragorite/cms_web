@@ -76,12 +76,12 @@
                 <h1>Connexion</h1>
                 <form action="" method="POST" class="connexion">
                     <div class="formConnexion">
-                        <label for="userNameConnect">Entrez votre nom: </label>
-                            <input type="text" name="userNameConnect" id="userNameConnect" required>
+                        <label for="userNameConnect" ></label>
+                            <input type="text" name="userNameConnect" placeholder="Entrez votre nom" id="userNameConnect" required>
                     </div>
                     <div class="formPassWord">
-                        <label for="passWord">Entrez votre mot de passe :</label>
-                        <input type="password" name="passWordConnect" id="passWord" required>
+                        <label for="passWord"></label>
+                        <input type="password" name="passWordConnect" placeholder="Entrez votre mot de passe" id="passWord" required>
                     </div>
                     <div class="form-example">
                         <input type="submit" value="Envoyer" name="formConnect">
