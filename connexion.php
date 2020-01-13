@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Connexion</title>
         <meta name="description" content="Page de connexion au super mortel CMS.">
-        <link rel="stylesheet" href="connexion.css">
+        <link rel="stylesheet" href="css/connexion.css">
          
     </head>
     <body>
@@ -26,7 +26,7 @@
                     </div>
                 </form>
             </div>
-            <div>
+            <div class="container">
             <h1>Inscription</h1>
                 <form action="" method="get" class="connexion">
                     <div class="formConnexion">
