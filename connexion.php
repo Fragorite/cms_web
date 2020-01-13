@@ -3,7 +3,7 @@
     if(isset($_POST['formConnect'])){
         if(!empty($_POST['userNameConnect']) && !empty($_POST['passWordConnect'])){
             $userNameConnect = $_POST['userNameConnect'];
-            $passWordConnect = sha256($_POST['passwordConnect']);
+            $passWordConnect = md5($_POST['passwordConnect']);
             $search = $db->query('SELECT * FROM users WHERE username = "'.$userNameConnect.'"');
             $userExist = $search->rowCount();
             if($userExist == 1){
@@ -35,11 +35,12 @@
                 $userNameExist = $searchUserName->rowCount();
                 if($userNameExist == 0){
                     if($passWordRegister1 == $passWordRegister2){
+                        $crypt = md5($passWordRegister1);
                         $addUser = $db->prepare('INSERT INTO users(mail, username, password) VALUES(:mail, :username, :password)');
                         $addUser->execute(array(
                             'mail' => $emailRegister,
                             'username' => $userNameRegister,
-                            'password' => sha256($passWordRegister1)
+                            'password' => $crypt
                         ));
                         header('Location: index.php');
                     } else {
@@ -73,7 +74,7 @@
             ?>
             <div class="container">
                 <h1>Connexion</h1>
-                <form action="" method="get" class="connexion">
+                <form action="" method="POST" class="connexion">
                     <div class="formConnexion">
                         <label for="userNameConnect">Entrez votre nom: </label>
                             <input type="text" name="userNameConnect" id="userNameConnect" required>
@@ -88,7 +89,7 @@
                 </form>
             </div>
             <div class="form-example">
-                <a href="#">Inscrivez-vous!</a>
+                <a href="?registred=0">Inscrivez-vous!</a>
             </div>
             <?php
                 } else {
@@ -99,7 +100,7 @@
                 <form action="" method="POST" class="connexion">
                     <div class="formConnexion">
                         <label for="userNameConnect">Entrez votre nom: </label>
-                            <input type="text" name="userNameConnect" id="userNameConnect" required>
+                            <input type="text" name="userNameRegister" id="userNameConnect" required>
                     </div>
                     <div class="formConnexion">
                         <label for="email">Entrez votre email: </label>
@@ -122,5 +123,6 @@
                 }
             ?>
         </div>
+        <?php if(isset($error)) { echo $error; } ?>
     </body>
 </html>
