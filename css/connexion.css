@@ -1,19 +1,29 @@
 body{
     background-color: darkblue;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+}
+
+.main{
+    display: grid;
+    grid-template-areas:     ".       .        ."   
+                            ".    connexion  ."
+                            ".      inscivezVous   ."
+                            ".       inscription    .";
+    grid-template-columns: auto 50% auto;
+    grid-template-rows: auto 1fr auto;
+ 
 }
 
 .container{
-    
+    grid-area: connexion;
     background-color: azure;
-    padding: 1%;
-    width:30%;
-    height:20%;
+    margin: 10%;
+    padding: 40px;
     text-align: left;  
     border-radius: 10px;
+}
+#container2{
+    grid-area: inscription;
+    background-color: azure;
 }
 h1{
     text-align: center;
