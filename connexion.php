@@ -67,17 +67,15 @@
          
     </head>
     <body>
-
         <div class="main">
-
-        <?php
-            if(!isset($_GET['registred'])){
-        ?>
-
-        <div class="container">
+            <?php
+                if(!isset($_GET['registred'])){
+            ?>
+            <div class="container">
+                <h1>Connexion</h1>
                 <form action="" method="get" class="connexion">
                     <div class="formConnexion">
-                        <label for="userNameConnect">Entrez votre pseudo: </label>
+                        <label for="userNameConnect">Entrez votre nom: </label>
                             <input type="text" name="userNameConnect" id="userNameConnect" required>
                     </div>
                     <div class="formPassWord">
@@ -90,18 +88,21 @@
                 </form>
             </div>
             <div class="form-example">
+                <a href="#">Inscrivez-vous!</a>
+            </div>
+            <?php
+                } else {
+            ?>
+            <div class="container">
+                <h1>Inscription</h1>
 
-                       <a href="#">Inscrivez-vous!</a>
-                    </div>
-            <div class="container" id="container2">
-            <h1>Inscription</h1>
-                <form action="" method="get" class="connexion">
+                <form action="" method="POST" class="connexion">
                     <div class="formConnexion">
                         <label for="userNameConnect">Entrez votre nom: </label>
                             <input type="text" name="userNameConnect" id="userNameConnect" required>
                     </div>
                     <div class="formConnexion">
-                        <label for="email">Entrez votre email: test </label>
+                        <label for="email">Entrez votre email: </label>
                             <input type="email" name="emailRegister" id="email" required>
                     </div>
                     <div class="formPassWord1">
@@ -117,68 +118,9 @@
                     </div>
                 </form>
             </div>
-            </div>
-
-                <a href="#">Inscrivez-vous!</a>
-            </div>
-        <?php
-            } else {
-        ?>
-            <div class="container">
-            <h1>Inscription</h1>
-
-        <?php
-            if(!isset($_GET['registred'])){
-        ?>
-        <div class="container">
-            <h1>Connexion</h1>
-            <form action="" method="get" class="connexion">
-                <div class="formConnexion">
-                    <label for="userNameConnect">Entrez votre nom: </label>
-                        <input type="text" name="userNameConnect" id="userNameConnect" required>
-                </div>
-                <div class="formPassWord">
-                    <label for="passWord">Entrez votre mot de passe :</label>
-                    <input type="password" name="passWordConnect" id="passWord" required>
-                </div>
-                <div class="form-example">
-                    <input type="submit" value="Envoyer" name="formConnect">
-                </div>
-            </form>
+            <?php
+                }
+            ?>
         </div>
-        <div class="form-example">
-            <a href="#">Inscrivez-vous!</a>
-        </div>
-        <?php
-            } else {
-        ?>
-        <div class="container">
-            <h1>Inscription</h1>
-
-            <form action="" method="POST" class="connexion">
-                <div class="formConnexion">
-                    <label for="userNameConnect">Entrez votre nom: </label>
-                        <input type="text" name="userNameConnect" id="userNameConnect" required>
-                </div>
-                <div class="formConnexion">
-                    <label for="email">Entrez votre email: </label>
-                        <input type="email" name="emailRegister" id="email" required>
-                </div>
-                <div class="formPassWord1">
-                    <label for="passWord1">Entrez votre mot de passe :</label>
-                    <input type="password" name="passWordRegister1" id="passWord1" required>
-                </div>
-                <div class="formPassWord2">
-                    <label for="passWord2">Vérifiez votre mot de passe :</label>
-                    <input type="password" name="passWordRegister2" id="passWord2" required>
-                </div>
-                <div class="form-example">
-                    <input type="submit" value="Envoyer" name="formRegister">
-                </div>
-            </form>
-        </div>
-        <?php
-            }
-        ?>
-
     </body>
+</html>
