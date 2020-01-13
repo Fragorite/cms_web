@@ -26,6 +26,9 @@
                     </div>
                 </form>
             </div>
+            <div class="form-example">
+                       <a href="#">Inscrivez-vous!</a>
+                    </div>
             <div class="container">
             <h1>Inscription</h1>
                 <form action="" method="get" class="connexion">
