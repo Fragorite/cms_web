@@ -34,7 +34,7 @@
                             <input type="text" name="userNameConnect" id="userNameConnect" required>
                     </div>
                     <div class="formConnexion">
-                        <label for="email">Entrez votre email: </label>
+                        <label for="email">Entrez votre email: test </label>
                             <input type="email" name="emailRegister" id="email" required>
                     </div>
                     <div class="formPassWord1">
