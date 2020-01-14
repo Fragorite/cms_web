@@ -24,8 +24,8 @@
     <!-- --------------------- -->
     <!-- MENU DROITE OU GAUCHE -->
     <div class="<?= $secondBlock ?>">
-
-
+        
+    </div>
     </div>
 </div>
 
