@@ -1,12 +1,12 @@
-
-
-html, body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
 /* define a fixed width for the entire menu */
 .navigation {
-  width: 300px;
+  width: 300px;    
+}
+
+ul  li{
+    border:solid 1px;
+    text-align: center;
+    
 }
 
 /* reset our lists to remove bullet points and padding */
@@ -19,7 +19,7 @@ html, body {
 /* make ALL links (main and submenu) have padding and background color */
 .mainmenu a {
   display: block;
-  background-color: #242a31;
+  background-color: #7880af;
   text-decoration: none;
   padding: 10px;
   color: #41347c;
@@ -27,7 +27,7 @@ html, body {
 
 /* add hover behaviour */
 .mainmenu a:hover {
-    background-color: #7880af;
+    background-color: #3d4c75;
 }
 
 
@@ -47,12 +47,12 @@ html, body {
 */
 
 .submenu a {
-  background-color: #242a31;
+  background-color: #d4d7e5;
 }
 
 /* hover behaviour for links inside .submenu */
 .submenu a:hover {
-  background-color: #7880af;
+  background-color: #3d4c75;
 }
 
 /* this is the initial state of all submenus.
@@ -61,6 +61,5 @@ html, body {
 .submenu {
   overflow: hidden;
   max-height: 0;
-  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
-    </style>
