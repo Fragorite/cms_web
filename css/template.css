@@ -1,7 +1,7 @@
 /* define a fixed width for the entire menu */
-header {
-    display: grid;
-    grid-template-areas: "left  centre"
-                        "left  centre" ;
-grid-template-columns: 300px 1100px;
+.container {
+    padding:100px;
+}
+.rightBlock{
+    background-color: aqua;
 }
