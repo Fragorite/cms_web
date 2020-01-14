@@ -7,7 +7,7 @@
             $search = $db->query('SELECT * FROM users WHERE username = "'.$userNameConnect.'"');
             $userExist = $search->rowCount();
             if($userExist == 1){
-                $user = $search->fecth(PDO::FETCH_ASSOC);
+                $user = $search->fetch(PDO::FETCH_ASSOC);
                 if($user['password'] == $passWordConnect){
                     $_SESSION['id'] == $user['id'];
                     header('Location: index.php');
