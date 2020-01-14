@@ -9,7 +9,7 @@ body{
 
 .main{
     display: grid;
-    grid-template-areas:     ".       .        ."   
+    grid-template-areas:       
                             ".    connexion  ."
                             ".      inscivezVous   ."
                             ".       inscription    .";
