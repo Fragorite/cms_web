@@ -3,7 +3,7 @@
     if(isset($_POST['formConnect'])){
         if(!empty($_POST['userNameConnect']) && !empty($_POST['passWordConnect'])){
             $userNameConnect = $_POST['userNameConnect'];
-            $passWordConnect = md5($_POST['passwordConnect']);
+            $passWordConnect = md5($_POST['passWordConnect']);
             $search = $db->query('SELECT * FROM users WHERE username = "'.$userNameConnect.'"');
             $userExist = $search->rowCount();
             if($userExist == 1){
@@ -87,6 +87,7 @@
                         <input type="submit" value="Envoyer" name="formConnect">
                     </div>
                 </form>
+                <div class="error"><?php if(isset($error)) { echo $error; } ?></div>
             </div>
             <div class="form-example">
                 <a href="?registred=0">Inscrivez-vous!</a>
@@ -118,11 +119,11 @@
                         <input type="submit" value="Envoyer" name="formRegister">
                     </div>
                 </form>
+                <div class="error"><?php if(isset($error)) { echo $error; } ?></div>
             </div>
             <?php
                 }
             ?>
         </div>
-        <?php if(isset($error)) { echo $error; } ?>
     </body>
 </html>
