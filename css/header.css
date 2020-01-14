@@ -1,1 +1,24 @@
-hjgjh
+.navigationHead {
+display: flex; /* 1 */
+flex-flow: row wrap; /* 2 */
+justify-content: space-around;    
+list-style: none;
+padding: 0;
+margin: 0;
+background-color: #242a31;
+
+}
+.navigationHead li{
+    border: none;
+}
+.navigationHead a {
+display: block;
+padding: 1em;
+text-decoration: none;
+text-align: center;
+color:#d4d7e5;
+}
+
+.navigationHead a:hover{
+    text-decoration: underline;
+}
