@@ -13,4 +13,7 @@
         $search = $db->query('SELECT * FROM users WHERE id = "'.$_SESSION['id'].'"');
         $userInfo = $search->fetch(PDO::FETCH_ASSOC);
     }
+
+    $searchInfos = $db->query('SELECT * FROM website');
+    $infosSite = $searchInfos->fetch(PDO::FETCH_ASSOC);
 ?>
