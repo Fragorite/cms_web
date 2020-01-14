@@ -16,4 +16,8 @@
 
     $searchInfos = $db->query('SELECT * FROM website');
     $infosSite = $searchInfos->fetch(PDO::FETCH_ASSOC);
+
+    if($infosSite['init'] == 0){
+        header('Location: installation/index.php');
+    }
 ?>
