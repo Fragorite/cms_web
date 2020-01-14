@@ -1,5 +1,14 @@
 /* define a fixed width for the entire menu */
+header {
+    display: grid;
+    grid-template-areas: "left  centre"
+                        "left  centre" ;
+grid-template-columns: 300px 1100px;
+}
+
 .navigation {
+  padding-top: 55px;    
+  grid-area: left;    
   width: 300px;    
 }
 
@@ -62,4 +71,10 @@ ul  li{
   overflow: hidden;
   max-height: 0;
   transition: all 0.5s ease-out;
+}
+.container{
+    grid-area: centre;
+    background-color: #d4d7e5;
+    min-height: 500px;
+    
 }
