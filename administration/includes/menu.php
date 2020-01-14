@@ -6,8 +6,6 @@
 <link rel="stylesheet" href="../css/menu.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,600&display=swap" rel="stylesheet"> 
 
-<header class="headerMenu">
-<div class="container"></div>
 <nav class="navigation">
   <ul class="mainmenu">
     <li><a href="">Article</a></li>
@@ -21,4 +19,3 @@
     <li><a href="">Retour</a></li>
   </ul>
 </nav>
-</header>
