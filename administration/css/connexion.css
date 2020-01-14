@@ -1,0 +1,90 @@
+html{ background-image: linear-gradient(90deg, #e0c3fc 0%, #8ec5fc 100%,#8ec5fc 100%,#e0c3fc 0%);}
+body{
+   
+   
+   
+    font-family: 'Raleway', sans-serif;
+    
+}
+
+.main{
+    display: grid;
+    grid-template-areas:       
+                            ".    connexion  ."
+                            ".      inscivezVous   ."
+                            ".       inscription    .";
+    grid-template-columns: auto 50% auto;
+    grid-template-rows: auto 1fr auto;
+     
+ 
+}
+input{
+    display: block;
+    width: 100%;
+    border-radius: 23.5px;
+    height: 47px;   
+    color:black;
+    font-size: 13px;
+    border: none;
+    background:#d4d7e5;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.form-example {
+	grid-area: inscription;
+    font-size: 1.4em;
+    text-shadow: 1px 1px 0px #d4d7e5;
+    text-align: center;
+}
+.form-example a{
+    color:#41374c;
+}
+.form-example>input{
+    margin-left: 25%;
+    width: 50%;
+}
+.container{
+    grid-area: connexion;
+    background-color: #3d4c75;
+    margin: 5%;
+    padding: 40px;
+    text-align: left;  
+    border-radius: 10px;
+    border:solid 5px;
+    border-color: #242a31;
+   -moz-box-shadow: 5px 5px 5px 0px #41374c;
+    -webkit-box-shadow: 5px 5px 5px 0px #41374c;
+    -o-box-shadow: 5px 5px 5px 0px #41374c;
+    box-shadow: 5px 5px 5px 0px #41374c;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#41374c, Direction=134, Strength=5);
+}
+#container2{
+    grid-area: inscription;
+    background-color: azure;
+}
+h1{
+    text-align: center;
+}
+.formConnexion {
+	display: flex;
+    
+}
+
+.formConnexion input[type="text"]{
+    flex: 1 1 auto;
+}
+
+.formPassWord{
+	display: flex;
+    
+}
+.formPassWord input[type="password"]{
+    flex: 1 1 auto;
+}
+
+.error{
+    color:red;
+    font-weight: bold;
+    text-align: center;
+        
+}
