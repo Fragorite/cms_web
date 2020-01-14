@@ -46,7 +46,7 @@ input{
 .container{
     grid-area: connexion;
     background-color: #3d4c75;
-    margin: 10%;
+    margin: 5%;
     padding: 40px;
     text-align: left;  
     border-radius: 10px;
