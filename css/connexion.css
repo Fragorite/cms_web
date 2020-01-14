@@ -1,7 +1,8 @@
+html{ background-image: linear-gradient(90deg, #e0c3fc 0%, #8ec5fc 100%,#8ec5fc 100%,#e0c3fc 0%);}
 body{
-    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-    -ms-linear-gradient:linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
-    background-size:cover;
+   
+   
+   
     font-family: 'Raleway', sans-serif;
     
 }
@@ -14,6 +15,7 @@ body{
                             ".       inscription    .";
     grid-template-columns: auto 50% auto;
     grid-template-rows: auto 1fr auto;
+     
  
 }
 input{
