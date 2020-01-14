@@ -99,20 +99,20 @@
 
                 <form action="" method="POST" class="connexion">
                     <div class="formConnexion">
-                        <label for="userNameConnect">Entrez votre nom: </label>
-                            <input type="text" name="userNameRegister" id="userNameConnect" required>
+                        <label for="userNameConnect"></label>
+                            <input type="text" name="userNameRegister" id="userNameConnect" placeholder="Entrez votre Nom" required>
                     </div>
                     <div class="formConnexion">
-                        <label for="email">Entrez votre email: </label>
-                            <input type="email" name="emailRegister" id="email" required>
+                        <label for="email"></label>
+                            <input type="email" name="emailRegister" id="email" placeholder="Entrez votre Email" required>
                     </div>
                     <div class="formPassWord1">
-                        <label for="passWord1">Entrez votre mot de passe :</label>
-                        <input type="password" name="passWordRegister1" id="passWord1" required>
+                        <label for="passWord1"></label>
+                        <input type="password" name="passWordRegister1" id="passWord1" placeholder="Entrez votre mot de passe" required>
                     </div>
                     <div class="formPassWord2">
-                        <label for="passWord2">Vérifiez votre mot de passe :</label>
-                        <input type="password" name="passWordRegister2" id="passWord2" required>
+                        <label for="passWord2"></label>
+                        <input type="password" name="passWordRegister2" id="passWord2" placeholder="Vérifiez votre mot de passe"required>
                     </div>
                     <div class="form-example">
                         <input type="submit" value="Envoyer" name="formRegister">
