@@ -1,4 +1,3 @@
-<?php include('includes/config.php'); // Configuration générale ?> 
 <?php include('includes/header.php'); // Haut de page ?>
 
 <?php
@@ -28,7 +27,8 @@
         <?php
             while($news = $searchNews->fetch(PDO::FETCH_ASSOC)){
         ?>
-            <h1><?= $news['title']; ?></h1>
+        <fieldset>
+            <legend><?= $news['title']; ?></legend>
             <p>
                 <?php
                     if(strlen($news['content']) > 200){
@@ -39,6 +39,7 @@
                     }
                 ?>
             </p>
+        </fieldset>
         <?php
             }
         ?>

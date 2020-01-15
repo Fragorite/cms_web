@@ -16,6 +16,11 @@
       </ul></li>
     <li><a href="">Forum</a>
     </li>
+    <li><a href="">Gestion du site</a>
+      <ul class="submenu">
+        <li><a href="">Template</a></li>
+        <li><a href="">Nom du site</a></li>
+      </ul></li>
     <li><a href="">Retour</a></li>
   </ul>
 </nav>

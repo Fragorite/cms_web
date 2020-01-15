@@ -1,3 +1,5 @@
+<?php include('includes/config.php'); ?>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Page de connexion au super mortel CMS.">
@@ -8,7 +10,7 @@
 
 <div>
     <ul class="navigationHead">
-        <li><a href="#">Ici le Titre</a></li>
+        <li><a href="#"><?= $infosSite['websiteName']; ?></a></li>
         <li><a href="#">Articles</a></li>
         <li><a href="#">Forum</a></li>
         <li><a href="#">Tchat</a></li>
