@@ -153,3 +153,7 @@ ul  li{
   max-height: 0;
   transition: all 0.5s ease-out;
 }
+.author{
+    text-align: right;
+    
+}
