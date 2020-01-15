@@ -5,7 +5,9 @@
     if(isset($_GET['id']) && !empty($_GET['id'])){
         $idNews = intval($_GET['id']);
         $searchNews = $db->query('SELECT * FROM news WHERE id = "'.$idNews.'"');
-        $news = $searchNews->fetch(PDO::FETCH_ASSOC);
+        $article = $searchNews->fetch(PDO::FETCH_ASSOC);
+        $searchAuthor = $db->query('SELECT * FROM users WHERE id = "'.$article['id_user'].'"');
+        $author = $searchAuthor->fetch(PDO::FETCH_ASSOC);
     } else {
         header('Location: index.php');
     }
@@ -18,15 +20,24 @@
     <!-- CONTENU GLOBAL -->
     <div class="firstBlock">
 
-        
+        <h1><?= $article['title']; ?></h1>
+        <p><?= $article['content']; ?></p>
 
     </div>
     <!-- --------------------- -->
 
     <!-- CONTENU SECONDAIRE -->
     <div class="secondBlock">
-
-
+        Publié le : <b><?= $article['date_publication']; ?></b><br />
+        Par : <b><?= $author['username']; ?></b><br /><br />
+        <?php
+            if(isset($userInfo['id']) && ($userInfo['id'] == $author['id'])){
+        ?>
+            <a href="#">Modifier l'article</a><br />
+            <a href="#">Supprimer l'article</a>
+        <?php
+            }
+        ?>
     </div>
 </div>
 
