@@ -1,6 +1,5 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Connexion</title>
 <meta name="description" content="Page de connexion au super mortel CMS.">
 <link rel="stylesheet" href="css/connexion.css">
 <link rel="stylesheet" href="css/header.css">
