@@ -1,6 +1,6 @@
 .container {
     display: grid;
-    grid-template-areas: "firstBlock  seconBlock";
+    grid-template-areas: "firstBlock  secondBlock";
     grid-template-columns: 75% 25%;
     align-items: start;
     column-gap: 1em;
@@ -11,6 +11,8 @@
    
     
 }
+
+
 
 .firstBlock{
    
