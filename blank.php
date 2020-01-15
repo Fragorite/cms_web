@@ -29,7 +29,7 @@
     <div class="secondBlock">
         
     </div>
-    </div>
 </div>
+
 
 <?php include('includes/footer.php'); // Pied de page ?> 
