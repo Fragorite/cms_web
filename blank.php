@@ -25,7 +25,7 @@
     </div>
     <!-- --------------------- -->
     <!-- MENU DROITE OU GAUCHE -->
-    <div class="$secondBlock">
+    <div class="secondBlock">
         
     </div>
     </div>
