@@ -11,6 +11,11 @@
 <div class="indexContainer">
     <!-- CONTENU GLOBAL -->
     <div class="indexBlock">
+        <div class="success">
+            <?php 
+                if(isset($_GET['deleteNews']) && $_GET['deleteNews'] == 1){ echo $deleteNewsSuccess; }
+            ?>
+        </div>
         <?php
             while($news = $searchNews->fetch(PDO::FETCH_ASSOC)){
                 $searchUser = $db->query('SELECT * FROM users WHERE id = "'.$news['id_user'].'"');

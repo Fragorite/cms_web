@@ -29,4 +29,12 @@
         session_destroy();
         header('Location: connexion.php');
     }
+
+    // LES SUCCESS
+    $deleteNewsSuccess = "L'article a bien été supprimé.";
+    $updateNewsSuccess = "L'article a été mis à jour.";
+
+    $createAccountValid = "Le compte a été créé. Vous pouvez maintenant vous connecter !";
+
+    $accessDenied = "Vous devez vous connecter pour accéder à cette fonctionnalité.";
 ?>

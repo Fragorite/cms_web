@@ -1,7 +1,9 @@
 <?php include('includes/header.php'); // Haut de page ?>
 
 <?php
-
+    if(!isset($userInfo['id'])){
+        header('Location: connexion.php');
+    }
     if(isset($_GET['id']) && !empty($_GET['id'])){
         $idNews = intval($_GET['id']);
         $searchNews = $db->query('SELECT * FROM news WHERE id = "'.$idNews.'"');
@@ -10,7 +12,8 @@
         $author = $searchAuthor->fetch(PDO::FETCH_ASSOC);
         if(isset($_GET['deleteNews']) && $_GET['deleteNews'] == 1){
             if($author['id'] == $article['id_user']){
-
+                $deleteNews = $db->query('DELETE FROM news WHERE id = "'.$article['id'].'"');
+                header('Location: index.php?deleteNews=1');
             } else {
                 header('Location: news.php?id='.$article['id']);
             }
