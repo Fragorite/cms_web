@@ -10,7 +10,7 @@
 
 <div class="container">
     <!-- CONTENU GLOBAL -->
-    <div class="firstBlock">
+    <div class="indexBlock">
         <?php
             while($news = $searchNews->fetch(PDO::FETCH_ASSOC)){
                 $searchUser = $db->query('SELECT * FROM users WHERE id = "'.$news['id_user'].'"');
