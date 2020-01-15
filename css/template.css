@@ -12,21 +12,23 @@
     
 }
 
-.rightBlock{
+.firstBlock{
     
     background-color: 7880af;
     padding: 1em;
     border-bottom-right-radius: 100px;
     border-top-left-radius: 50px;
+    min-height: 400px;
     
    
 }
 
-.leftBlock{
+.secondBlock{
      background-color: 7880af;
      padding: 1em;
      border-top-right-radius: 100px;
      border-bottom-left-radius: 50px;
+     min-height: 400px;
      /*order:-1;*/
     
 }
