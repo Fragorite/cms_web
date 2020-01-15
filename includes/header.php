@@ -21,14 +21,15 @@
 
 <div>
     <ul class="navigationHead">
-        <li><a href="#"><?= $infosSite['websiteName']; ?></a></li>
-        <li><a href="#">Articles</a></li>
-        <li><a href="#">Forum</a></li>
-        <li><a href="#">Tchat</a></li>
-        <?php if(isset($userInfo['id']) && $userInfo['admin'] > 0) { ?>
-        <li><a href="#">Administration</a></li>
+        <li><a href="index.php"><?= $infosSite['websiteName']; ?></a></li>
+        <li><a href="forum.php">Forum</a></li>
+        <?php if(isset($userInfo['id'])) { ?>
+        <li><a href="">Tchat</a></li>
         <?php } ?>
-        <?php if(isset($_SESSION['id'])){ ?>
+        <?php if(isset($userInfo['id']) && $userInfo['admin'] > 0) { ?>
+        <li><a href="administration/index.php">Administration</a></li>
+        <?php } ?>
+        <?php if(isset($userInfo['id'])){ ?>
         <li><a href="?disconnect=1">Déconnexion</a></li>
         <?php } else { ?>
         <li><a href="connexion.php">Connexion/Inscription</a></li>
