@@ -206,7 +206,14 @@ ul  li{
     
 }
 
-fiedlset{
+fieldset{
     max-width: 90%;
     max-height: 90%;
+    
 }
+fieldset>p{
+    max-width: 90%;
+    max-height: 90%;
+    overflow-wrap:break-word;
+}
+legend
