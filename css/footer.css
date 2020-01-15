@@ -1,0 +1,30 @@
+.navigationFooter {
+display: flex; /* 1 */
+flex-flow: row wrap; /* 2 */
+justify-content: space-around;    
+list-style: none;
+padding: 0;
+margin: 0;
+background-color: #242a31;
+max-height: 80px;
+
+}
+.navigationFooter li{
+    border: none;
+}
+.navigationFooter a {
+display: block;
+padding: 1em;
+text-decoration: none;
+text-align: center;
+color:#d4d7e5;
+ -webkit-transition: font-size .5s ease;
+  -moz-transition: font-size .5s ease;
+  -o-transition: font-size .5s ease;
+  transition: font-size .5s ease;
+}
+
+.navigationFooter a:hover{
+    text-shadow: 1px 0px 20px white; 
+    font-size: 22px;
+}
