@@ -44,10 +44,10 @@
         ?>
     </div>
     <!-- --------------------- -->
-    <!-- MENU DROITE OU GAUCHE -->
+
+    <!-- CONTENU SECONDAIRE -->
     <div class="secondBlock">
-
-
+        
     </div>
 </div>
 

@@ -44,7 +44,8 @@
 
     </div>
     <!-- --------------------- -->
-    <!-- MENU DROITE OU GAUCHE -->
+
+    <!-- CONTENU SECONDARE -->
     <div class="secondBlock">
 
     </div>
