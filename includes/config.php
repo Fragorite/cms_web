@@ -1,4 +1,8 @@
-<?php session_start();
+<?php
+    if(!session_id())
+    {
+        session_start();
+    }
     $userNameDb = "root";   // Nom d'utilisateur de la base de donnée
     $passWordDb = "";       // Mot de passe de la base de donnée
 
