@@ -8,6 +8,13 @@
         $article = $searchNews->fetch(PDO::FETCH_ASSOC);
         $searchAuthor = $db->query('SELECT * FROM users WHERE id = "'.$article['id_user'].'"');
         $author = $searchAuthor->fetch(PDO::FETCH_ASSOC);
+        if(isset($_GET['deleteNews']) && $_GET['deleteNews'] == 1){
+            if($author['id'] == $article['id_user']){
+
+            } else {
+                header('Location: news.php?id='.$article['id']);
+            }
+        }
     } else {
         header('Location: index.php');
     }
@@ -34,7 +41,7 @@
             if(isset($userInfo['id']) && ($userInfo['id'] == $author['id'])){
         ?>
             <a href="addNews.php?id=<?= $article['id']; ?>">Modifier l'article</a><br />
-            <a href="#">Supprimer l'article</a>
+            <a href="?id=<?= $article['id']; ?>&deleteNews=1">Supprimer l'article</a>
         <?php
             }
         ?>
