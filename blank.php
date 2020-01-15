@@ -17,7 +17,7 @@
     <?php
         }
     ?>
-    <!-- MENU DROITE OU GAUCHE -->
+    <!-- CONTENU GLOBAL -->
     <div class="firstBlock">
 
         
@@ -25,7 +25,7 @@
     </div>
     <!-- --------------------- -->
 
-    <!-- CONTENU GLOBAL -->
+    <!-- CONTENU SECONDAIRE -->
     <div class="secondBlock">
         
     </div>
