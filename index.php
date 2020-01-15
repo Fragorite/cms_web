@@ -13,16 +13,18 @@
 
     <?php
         if($infosSite['template'] == 1) {
-            $firstBlock = "rightBlock";
-            $secondBlock = "leftBlock";
+    ?>
+        <link rel="stylesheet" href="css/template.css">
+    <?php  
         }
         if($infosSite['template'] == 2){
-            $firstBlock = "leftBlock";
-            $secondBlock = "rightBlock";
+    ?>
+        <link rel="stylesheet" href="css/template2.css">
+    <?php
         }
     ?>
     <!-- CONTENU GLOBAL -->
-    <div class="<?= $firstBlock; ?>">
+    <div class="firstBlock">
         <?php
             while($news = $searchNews->fetch(PDO::FETCH_ASSOC)){
         ?>
@@ -43,7 +45,7 @@
     </div>
     <!-- --------------------- -->
     <!-- MENU DROITE OU GAUCHE -->
-    <div class="<?= $secondBlock ?>">
+    <div class="secondBlock">
 
 
     </div>
