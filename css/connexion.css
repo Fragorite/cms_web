@@ -47,7 +47,7 @@ input{
     grid-area: connexion;
     background-color: #3d4c75;
     margin: 1%;
-    padding: 40px;
+    padding-bottom: 40px;
     text-align: left;  
     border-radius: 10px;
     border:solid 5px;
@@ -158,13 +158,28 @@ ul  li{
     text-align: right;
     
 }
-.indexContainer{}
+.indexContainer{
+    grid-area: connexion;
+    background-color: #3d4c75;
+    margin: 1%;
+    padding: 4px;
+    text-align: left;  
+    border-radius: 10px;
+    border:solid 5px;
+    border-color: #242a31;
+   -moz-box-shadow: 5px 5px 5px 0px #41374c;
+    -webkit-box-shadow: 5px 5px 5px 0px #41374c;
+    -o-box-shadow: 5px 5px 5px 0px #41374c;
+    box-shadow: 5px 5px 5px 0px #41374c;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#41374c, Direction=134, Strength=5);
+    
+    
+}
 .indexBlock{
     background-color: 7880af;
     padding: 1em;
     border-bottom-right-radius: 100px;
     border-top-left-radius: 50px;
     min-height: 400px;
-    
-    width:340%;
+    width: 200%;
 }
