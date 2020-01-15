@@ -24,7 +24,7 @@
                         $content = substr($news['content'], 0, 200);
                         echo $content."...<a href='news.php?id=".$news['id']."'> Voir la suite </a>";
                     } else {
-                        echo $news['content']."<a href='news.php?id=".$news['id']."'  [Voir l'article] </a> ";
+                        echo $news['content']." | <a href='news.php?id=".$news['id']."'>[Voir l'article] </a> ";
                     }
                 ?>
                 <div class="author">Publié le <b><?= $news['date_publication']; ?></b> par <b><?= $userCheck['username']; ?></b></div>
@@ -33,11 +33,7 @@
         <?php
             }
         ?>
-    </div>
-    <!-- --------------------- -->
-
-    <!-- CONTENU SECONDAIRE -->
-    
+    </div>    
 </div>
 
 <?php include('includes/footer.php'); // Pied de page ?> 
