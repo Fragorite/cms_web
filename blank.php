@@ -17,15 +17,16 @@
     <?php
         }
     ?>
-    <!-- CONTENU GLOBAL -->
+    <!-- MENU DROITE OU GAUCHE -->
     <div class="firstBlock">
 
         
 
     </div>
     <!-- --------------------- -->
-    <!-- MENU DROITE OU GAUCHE -->
-    <div class="$secondBlock">
+
+    <!-- CONTENU GLOBAL -->
+    <div class="secondBlock">
         
     </div>
     </div>

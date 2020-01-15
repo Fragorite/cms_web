@@ -37,14 +37,15 @@
     <?php
         }
     ?>
-    <!-- CONTENU GLOBAL -->
+    <!-- MENU DROITE OU GAUCHE -->
     <div class="firstBlock">
         <h1><?= $infosSubject['title']; ?></h1>
         <p><?= $infosSubject['content']; ?></p>
 
     </div>
     <!-- --------------------- -->
-    <!-- MENU DROITE OU GAUCHE -->
+
+    <!-- CONTENU GLOBAL -->
     <div class="secondBlock">
 
     </div>

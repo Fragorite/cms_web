@@ -23,8 +23,14 @@
     <?php
         }
     ?>
-    <!-- CONTENU GLOBAL -->
+    <!-- MENU DROITE OU GAUCHE -->
     <div class="firstBlock">
+        
+    </div>
+    <!-- --------------------- -->
+
+    <!-- CONTENU GLOBAL -->
+    <div class="secondBlock">
         <?php
             while($news = $searchNews->fetch(PDO::FETCH_ASSOC)){
         ?>
@@ -42,12 +48,6 @@
         <?php
             }
         ?>
-    </div>
-    <!-- --------------------- -->
-    <!-- MENU DROITE OU GAUCHE -->
-    <div class="secondBlock">
-
-
     </div>
 </div>
 
