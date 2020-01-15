@@ -159,5 +159,11 @@ ul  li{
 }
 
 .indexBlock{
-    width:100%: 
+    background-color: 7880af;
+    padding: 1em;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 50px;
+    min-height: 400px;
+    
+    width:100%;
 }
