@@ -25,7 +25,13 @@
         <li><a href="#">Articles</a></li>
         <li><a href="#">Forum</a></li>
         <li><a href="#">Tchat</a></li>
+        <?php if(isset($userInfo['id']) && $userInfo['admin'] > 0) { ?>
         <li><a href="#">Administration</a></li>
-        <li><a href="#">Déconnexion</a></li>
+        <?php } ?>
+        <?php if(isset($_SESSION['id'])){ ?>
+        <li><a href="?disconnect=1">Déconnexion</a></li>
+        <?php } else { ?>
+        <li><a href="connexion.php">Connexion/Inscription</a></li>
+        <?php } ?>
     </ul>
 </div>

@@ -20,4 +20,9 @@
     if($infosSite['init'] == 0){
         header('Location: installation/index.php');
     }
+
+    if(isset($_GET['disconnect']) && $_GET['disconnect'] == 1){
+        session_destroy();
+        header('Location: connexion.php');
+    }
 ?>
