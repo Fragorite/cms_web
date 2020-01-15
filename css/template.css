@@ -1,8 +1,9 @@
 /* define a fixed width for the entire menu */
 .container {
     display: grid;
-    grid-template-columns: 20% 75%;
+    grid-template-columns: 25% 75%;
     column-gap: 1em;
+    width:95.4%;
     margin-left: 0px;
     padding-left: 10px;
     margin-top: 1%;
