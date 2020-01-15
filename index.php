@@ -9,26 +9,15 @@
 <title><?= $infosSite['websiteName']; ?> - Accueil</title>
 
 <div class="container">
-
-    <?php
-        if($infosSite['template'] == 1) {
-    ?>
-        <link rel="stylesheet" href="css/template.css">
-    <?php  
-        }
-        if($infosSite['template'] == 2){
-    ?>
-        <link rel="stylesheet" href="css/template2.css">
-    <?php
-        }
-    ?>
     <!-- CONTENU GLOBAL -->
     <div class="firstBlock">
         <?php
             while($news = $searchNews->fetch(PDO::FETCH_ASSOC)){
+                $searchUser = $db->query('SELECT * FROM users WHERE id = "'.$news['id_user'].'"');
+                $userCheck = $searchUser->fetch(PDO::FETCH_ASSOC);     
         ?>
         <fieldset>
-            <legend><?= $news['title']; ?></legend>
+            <legend><h2><?= $news['title']; ?></h2></legend>
             <p>
                 <?php
                     if(strlen($news['content']) > 200){
@@ -38,6 +27,7 @@
                         echo $news['content']."<a href='news.php?id=".$news['id']."'  [Voir l'article] </a> ";
                     }
                 ?>
+                <div class="author">Publié le <b><?= $news['date_publication']; ?></b> par <b><?= $userCheck['username']; ?></b></div>
             </p>
         </fieldset>
         <?php
