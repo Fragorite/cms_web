@@ -8,7 +8,7 @@
 
 <title><?= $infosSite['websiteName']; ?> - Accueil</title>
 
-<div class="container">
+<div class="indexContainer">
     <!-- CONTENU GLOBAL -->
     <div class="indexBlock">
         <?php
