@@ -46,8 +46,11 @@ input{
 .container{
     grid-area: connexion;
     background-color: #3d4c75;
-    margin: 1%;
+    margin: 10%;
+    
     padding-bottom: 40px;
+    padding-left: 4%;
+    padding-right: 4%;
     text-align: left;  
     border-radius: 10px;
     border:solid 5px;
@@ -159,10 +162,10 @@ ul  li{
     
 }
 .indexContainer{
-    grid-area: connexion;
+    
     background-color: #3d4c75;
     margin: 1%;
-    padding: 4px;
+    padding-bottom: 40px;
     text-align: left;  
     border-radius: 10px;
     border:solid 5px;
@@ -181,5 +184,9 @@ ul  li{
     border-bottom-right-radius: 100px;
     border-top-left-radius: 50px;
     min-height: 400px;
-    width: 200%;
+    margin-left: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 94%;
+    
 }

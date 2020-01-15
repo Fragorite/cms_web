@@ -7,6 +7,28 @@
     margin-left: 0px;
     padding-left: 10px;
     margin-top: 1%;
+    
+    
+    
+    
+    
+    
+     grid-area: connexion;
+    background-color: #3d4c75;
+    margin: 10%;
+    
+    padding-bottom: 40px;
+    padding-left: 4%;
+    padding-right: 4%;
+    text-align: left;  
+    border-radius: 10px;
+    border:solid 5px;
+    border-color: #242a31;
+   -moz-box-shadow: 5px 5px 5px 0px #41374c;
+    -webkit-box-shadow: 5px 5px 5px 0px #41374c;
+    -o-box-shadow: 5px 5px 5px 0px #41374c;
+    box-shadow: 5px 5px 5px 0px #41374c;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#41374c, Direction=134, Strength=5);
    
     
 }
