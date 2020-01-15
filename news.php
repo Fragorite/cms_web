@@ -33,7 +33,7 @@
         <?php
             if(isset($userInfo['id']) && ($userInfo['id'] == $author['id'])){
         ?>
-            <a href="#">Modifier l'article</a><br />
+            <a href="addNews.php?id=<?= $article['id']; ?>">Modifier l'article</a><br />
             <a href="#">Supprimer l'article</a>
         <?php
             }
