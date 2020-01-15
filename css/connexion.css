@@ -90,8 +90,12 @@ h1{
     color:red;
     font-weight: bold;
     text-align: center;
-        
-}
+    }
+.success{
+    color:green;
+    font-weight: bold;
+    text-align: center;
+    }
 /* define a fixed width for the entire menu */
 .navigation {
   width: 300px;    
