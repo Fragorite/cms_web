@@ -15,19 +15,6 @@
 <title><?= $infosSite['websiteName']; ?> - News</title>
 
 <div class="container">
-
-    <?php
-        if($infosSite['template'] == 1) {
-    ?>
-        <link rel="stylesheet" href="css/template.css">
-    <?php  
-        }
-        if($infosSite['template'] == 2){
-    ?>
-        <link rel="stylesheet" href="css/template2.css">
-    <?php
-        }
-    ?>
     <!-- CONTENU GLOBAL -->
     <div class="firstBlock">
 

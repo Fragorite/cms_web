@@ -23,19 +23,6 @@
 <title><?= $infosSite['websiteName']; ?> - Forum</title>
 
 <div class="container">
-
-    <?php
-        if($infosSite['template'] == 1) {
-    ?>
-        <link rel="stylesheet" href="css/template.css">
-    <?php  
-        }
-        if($infosSite['template'] == 2){
-    ?>
-        <link rel="stylesheet" href="css/template2.css">
-    <?php
-        }
-    ?>
     <!-- CONTENU GLOBAL -->
     <div class="firstBlock">
         <h1><?= $infosSubject['title']; ?></h1>
