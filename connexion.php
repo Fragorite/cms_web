@@ -72,7 +72,7 @@
             <?php
                 if(!isset($_GET['registred'])){
             ?>
-            <div class="container">
+            <div class="containerConnect">
                 <h1>Connexion</h1>
                 <form action="" method="POST" class="connexion">
                     <div class="formConnexion">
@@ -95,7 +95,7 @@
             <?php
                 } else {
             ?>
-            <div class="container">
+            <div class="containerConnect">
                 <h1>Inscription</h1>
 
                 <form action="" method="POST" class="connexion">
