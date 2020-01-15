@@ -25,7 +25,10 @@
      padding: 1em;
      border-top-right-radius: 100px;
      border-bottom-left-radius: 50px;
-     width: 280px;  
+    padding-right: 25%;
+    min-height: 400px;
+    width:210px;
+       
     }
 
 
