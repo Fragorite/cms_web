@@ -4,7 +4,7 @@
 <meta name="description" content="Page de connexion au super mortel CMS.">
 <link rel="stylesheet" href="css/connexion.css">
 <link rel="stylesheet" href="css/header.css">
-<link rel="stylesheet" href="css/template.css">
+<link rel="stylesheet" href="css/template1.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,600&display=swap" rel="stylesheet"> 
 
 <div>

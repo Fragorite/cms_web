@@ -28,6 +28,7 @@
      border-top-right-radius: 100px;
      border-bottom-left-radius: 50px;
      min-height: 400px;
-     /*order:-1;*/
+     order:-1; 
+     
     
 }
