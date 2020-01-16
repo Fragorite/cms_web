@@ -167,8 +167,8 @@ ul  li{
     text-align: right;
     
 }
-.container {
-     background-color: #3d4c75;
+.container {    
+    background-color: #3d4c75;
     min-height:300px;
     margin: 1%;
     margin-top:5%; 
@@ -183,7 +183,7 @@ ul  li{
     -o-box-shadow: 5px 5px 5px 0px #41374c;
     box-shadow: 5px 5px 5px 0px #41374c;
     filter:progid:DXImageTransform.Microsoft.Shadow(color=#41374c, Direction=134, Strength=5);
-    width:95%;
+    max-width:95%;
 	
 }
 .indexContainer{
