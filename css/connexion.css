@@ -69,6 +69,9 @@ input{
 h1{
     text-align: center;
 }
+h2{
+    text-align: center;
+}
 .formConnexion {
 	display: flex;
     
@@ -205,7 +208,7 @@ ul  li{
     border-top-left-radius: 51px;
     min-height: 400px;
     margin-left: 2%;
-    margin-top: 5%;
+    margin-top: 2%;
     margin-bottom: 5%;
     width: 94%;
     
@@ -217,4 +220,23 @@ fieldset p{
     max-height: 90%;
     overflow-wrap:break-word;
     word-wrap: break-word;
+}
+
+.btnRetour a{
+display: block;
+padding-top: 2em;
+text-decoration: none;
+text-align: center;
+color:#d4d7e5;
+-webkit-transition: font-size .5s ease;
+-moz-transition: font-size .5s ease;
+-o-transition: font-size .5s ease;
+transition: font-size .5s ease;  
+text-transform: uppercase;
+}
+
+.btnRetour a:hover{
+    text-shadow: 1px 0px 20px white; 
+    font-size: 22px;
+    text-transform: uppercase;
 }
