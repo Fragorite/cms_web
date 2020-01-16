@@ -1,4 +1,6 @@
 
+<?php include('includes/secure.php'); ?>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="stylesheet" href="../css/connexion.css">
@@ -20,6 +22,6 @@
         <li><a href="">Template</a></li>
         <li><a href="">Nom du site</a></li>
       </ul></li>
-    <li><a href="">Retour</a></li>
+    <li><a href="../index.php">Retour</a></li>
   </ul>
 </nav>

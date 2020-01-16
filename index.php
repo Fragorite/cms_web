@@ -10,13 +10,10 @@
 
 <div class="indexContainer">
     <!-- CONTENU GLOBAL -->
-        <div class="newArticle"><a href="#">Créez un article</a></div>
+    <div class="newArticle"><a href="addNews.php">Créez un article</a></div>
     <div class="indexBlock">
-        <div class="success">
-            <?php 
-                if(isset($_GET['deleteNews']) && $_GET['deleteNews'] == 1){ echo $deleteNewsSuccess; }
-            ?>
-        </div>
+        <div class="error"><?php if(isset($_GET['forbidden']) && $_GET['forbidden'] == 1){ echo $forbidden; } ?></div>
+        <div class="success"><?php if(isset($_GET['deleteNews']) && $_GET['deleteNews'] == 1){ echo $deleteNewsSuccess; } ?></div>
         <?php
             while($news = $searchNews->fetch(PDO::FETCH_ASSOC)){
                 $searchUser = $db->query('SELECT * FROM users WHERE id = "'.$news['id_user'].'"');
