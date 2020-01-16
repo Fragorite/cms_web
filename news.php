@@ -49,6 +49,10 @@
             }
         ?>
     </div>
+     <div  class="btnRetour">
+         <a href="#">Retour</a>
+    </div>
+     
 </div>
 
 <?php include('includes/footer.php'); // Pied de page ?> 
