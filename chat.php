@@ -63,7 +63,7 @@ $('#usersConnected').load('chat.php #usersConnected').fadeIn("slow");
                 <legend>
                     <b><?= $chatMessage['date_publication']; ?></b>
                 </legend>
-                <?php if($author['admin'] > 0) { echo '<b><div style="color:red; display: inline-block">[ADMIN] '.$author['username']; } ?> : <?= $messages['content']; ?></div></b>
+                <?php if($author['admin'] > 0) { echo '<b><div style="color:red; display: inline-block">[ADMIN] '.$author['username']; } ?> : <?= $chatMessage['content']; ?></div></b>
             </fieldset>
             <?php
                 }

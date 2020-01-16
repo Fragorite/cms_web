@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 16 jan. 2020 à 14:57
+-- Généré le :  jeu. 16 jan. 2020 à 16:17
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -40,10 +40,20 @@ CREATE TABLE `chat_messages` (
 --
 
 INSERT INTO `chat_messages` (`id`, `content`, `date_publication`, `id_user`) VALUES
-(1, 'berbebr', '16/01/2020 à 14:27', 1),
 (2, 'azrzar', '16/01/2020 à 14:28', 1),
-(3, 'ezfzfzgf', '16/01/2020 à 14:28', 1),
-(4, 'haha', '16/01/2020 à 14:56', 1);
+(5, 'rarzarzr', '16/01/2020 à 16:12', 1),
+(6, 'rzarazrazrazrazr', '16/01/2020 à 16:12', 1),
+(7, 'zadazdazd', '16/01/2020 à 16:15', 2),
+(8, 'sdqsqd', '16/01/2020 à 16:16', 2),
+(9, 'zerrezr', '16/01/2020 à 16:16', 2),
+(10, 'ezrzer', '16/01/2020 à 16:16', 2),
+(11, 'zerzerzer', '16/01/2020 à 16:16', 2),
+(12, 'ezrzerzerz', '16/01/2020 à 16:16', 2),
+(13, 'yjyj', '16/01/2020 à 16:17', 1),
+(14, 'yjtyjy', '16/01/2020 à 16:17', 1),
+(15, 'dazdazdazdzad', '16/01/2020 à 16:17', 1),
+(16, 'dzadazdzad', '16/01/2020 à 16:17', 1),
+(17, 'azdadzdazd', '16/01/2020 à 16:17', 1);
 
 -- --------------------------------------------------------
 
@@ -135,7 +145,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `mail`, `username`, `password`, `admin`, `connected`) VALUES
 (1, 'TEST@TEST.TEST', 'tz', '098f6bcd4621d373cade4e832627b4f6', 1, 1),
-(2, 'grldfaure@gmail.com', 'gerald', 'ab4f63f9ac65152575886860dde480a1', 0, 1);
+(2, 'grldfaure@gmail.com', 'gerald', 'ab4f63f9ac65152575886860dde480a1', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -198,7 +208,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT pour la table `chat_messages`
 --
 ALTER TABLE `chat_messages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT pour la table `frm_answers`
