@@ -97,7 +97,7 @@
                     <?php 
                         if(isset($userInfo['id']) && $userInfo['id'] == $authorAnswer['id']){
                     ?>
-                    <a href="#">Modifier</a> | <a href="forum.php?id=<?= $idSubject; ?>&answerDeleteId=<?= $answer['id']; ?>">Supprimer</a><br />
+                    <a href="forum.php?id=<?= $idSubject; ?>&answerDeleteId=<?= $answer['id']; ?>">Supprimer</a><br />
                     <?php
                         }
                     ?>
