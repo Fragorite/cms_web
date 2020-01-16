@@ -1,11 +1,9 @@
-html{ background-image: linear-gradient(90deg, #e0c3fc 0%, #8ec5fc 100%,#8ec5fc 100%,#e0c3fc 0%);}
-body{
-   
-   
-   
-    font-family: 'Raleway', sans-serif;
-    
+html{ 
+    background-image: linear-gradient(90deg, #e0c3fc 0%, #8ec5fc 100%,#8ec5fc 100%,#e0c3fc 0%);
 }
+body{
+    font-family: 'Raleway', sans-serif;
+    }
 
 .main{
     display: grid;
@@ -239,4 +237,32 @@ text-transform: uppercase;
     text-shadow: 1px 0px 20px white; 
     font-size: 22px;
     text-transform: uppercase;
+}
+.btnAddNewsRetour {
+	grid-column: 2;
+   
+}
+.btnAddNewsRetour a{
+display: block;
+text-decoration: none;
+text-align: center;
+margin-top: -2em;
+color:#d4d7e5;
+-webkit-transition: font-size .5s ease;
+-moz-transition: font-size .5s ease;
+-o-transition: font-size .5s ease;
+transition: font-size .5s ease;  
+text-transform: uppercase;
+}
+.btnAddNewsRetour a:hover{
+    text-shadow: 1px 0px 20px white; 
+    font-size: 22px;
+    text-transform: uppercase;
+    }
+
+.areaWidth{
+    min-height:300px;
+    min-width:500px;
+    max-width: 1000px;
+    margin-bottom: 2em;
 }

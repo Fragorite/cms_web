@@ -66,7 +66,7 @@
     <div class="firstBlock">
         <form method="POST" action="">
             <input type="text" name="titleAdd" id="titleAdd" placeholder="Entrez le titre de l'article" value="<?php if(isset($news['title'])) { echo $news['title']; } ?>">
-            <textarea rows="10" name="contentAdd" style="width: 100%;"><?php if(isset($_POST['contentAdd'])) { echo $_POST['contentAdd']; } if(isset($news['content'])) { $test = str_replace("<br />", '', $news['content']); echo $test; } ?></textarea>
+            <textarea class="areaWidth" rows="10" name="contentAdd" style="width: 100%;"><?php if(isset($_POST['contentAdd'])) { echo $_POST['contentAdd']; } if(isset($news['content'])) { $test = str_replace("<br />", '', $news['content']); echo $test; } ?></textarea>
             <input type="submit" name="formAddNews" value="Publier l'article">
         </form>
         <div class="error">
@@ -85,6 +85,9 @@
         - Pas de propos racistes ou insultants. <br />
         - Pas de message haineux ...<br />
         - .... <br />
+    </div>
+    <div class="btnAddNewsRetour">
+        <a href="">Retour</a>
     </div>
 </div>
 
