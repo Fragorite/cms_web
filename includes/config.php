@@ -52,6 +52,8 @@
     $deleteAnswerSuccess = "La réponse a bien été supprimé.";
     $updateAnswerSuccess = "La réponse a été mise à jour.";
 
+    $deleteMessageSuccess = "Le message a bien été supprimé.";
+
     $createAccountValid = "Le compte a été créé. Vous pouvez désormais vous connecter.";
 
     $accessDenied = "Vous devez vous connecter pour accéder à cette fonctionnalité.";
