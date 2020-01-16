@@ -26,8 +26,20 @@
     }
 
     if(isset($_GET['disconnect']) && $_GET['disconnect'] == 1){
+        $updateUser = $db->query('UPDATE users SET connected = 0 WHERE id = "'.$_SESSION['id'].'"');
         session_destroy();
         header('Location: connexion.php');
+    }
+
+    if(isset($_SESSION['timestamp'])){ // si $_SESSION['timestamp'] existe
+        if($_SESSION['timestamp'] + 600 > time()){
+               $_SESSION['timestamp'] = time();
+        } else { 
+            $updateUser = $db->query('UPDATE users SET connected = 0 WHERE id = "'.$_SESSION['id'].'"');
+            session_destroy(); 
+        }
+    } else { 
+        $_SESSION['timestamp'] = time(); 
     }
 
     // LES SUCCESS

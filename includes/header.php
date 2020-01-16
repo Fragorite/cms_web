@@ -4,6 +4,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="description" content="Page de connexion au super mortel CMS.">
 
+<script src= »http://code.jquery.com/jquery-latest.js »></script>
+
 <link rel="stylesheet" href="css/connexion.css">
 <link rel="stylesheet" href="css/header.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,600&display=swap" rel="stylesheet"> 
@@ -25,7 +27,7 @@
         <li><a href="index.php"><?= $infosSite['websiteName']; ?></a></li>
         <li><a href="forum.php">Forum</a></li>
         <?php if(isset($userInfo['id'])) { ?>
-        <li><a href="">Tchat</a></li>
+        <li><a href="chat.php">Tchat</a></li>
         <?php } ?>
         <?php if(isset($userInfo['id']) && $userInfo['admin'] > 0) { ?>
         <li><a href="administration/index.php">Administration</a></li>

@@ -48,7 +48,9 @@
                         'date_publication'  => $dateTimeAdd,
                         'id_user'           => $userInfo['id']
                     ));
-                    $redirect = $db->query('SELECT id FROM news WHERE title = "'.$titleAdd.'"');
+                    $redirectSearch = $db->query('SELECT MAX(id) FROM news');
+                    $redirectFetch = $redirectSearch->fetch(PDO::FETCH_ASSOC);
+                    $redirect = $redirectFetch['id'];
                     header('Location: news.php?id='.$redirect);
                 } else {
                     $error = "Le titre ne doit pas dépasser 80 caractères.";

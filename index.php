@@ -23,8 +23,8 @@
             <legend><h2><?= $news['title']; ?></h2></legend>
             <p>
                 <?php
-                    if(strlen($news['content']) > 200){
-                        $content = substr($news['content'], 0, 200);
+                    if(strlen($news['content']) > 400){
+                        $content = substr($news['content'], 0, 400);
                         echo $content."... <a href='news.php?id=".$news['id']."'>[Voir la suite]</a>";
                     } else {
                         echo $news['content']."<br /><a href='news.php?id=".$news['id']."'>[Voir l'article] </a> ";

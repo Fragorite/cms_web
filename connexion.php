@@ -10,6 +10,7 @@
                 $user = $search->fetch(PDO::FETCH_ASSOC);
                 if($user['password'] == $passWordConnect){
                     $_SESSION['id'] = $user['id'];
+                    $updateUser = $db->query('UPDATE users SET connected = 1 WHERE id = "'.$user['id'].'"');
                     header('Location: index.php');
                 } else {
                     $error = "Identifiants invalides.";

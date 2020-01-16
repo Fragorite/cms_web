@@ -122,9 +122,9 @@
         <?php
             }
         ?>
-        <?php } else { ?>
-            Veuillez sélectionner un topic sur le menu secondaire ou créer un noveau topic.
-        <?php } ?>
+            <?php } else { ?>
+                Veuillez sélectionner un topic sur le menu secondaire ou créer un noveau topic.
+            <?php } ?>
         <?php } else { ?>
             Veuillez sélectionner un topic sur le menu secondaire ou créer un noveau topic.
         <?php } ?>
@@ -144,7 +144,7 @@
             }
         ?>
         <hr>
-            <a href="">Créer un sujet</a><br/>
+            <a href="addSubject.php">Créer un sujet</a><br/>
         
             <a href="index.php">Retour</a>
         </div>
