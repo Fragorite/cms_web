@@ -71,12 +71,12 @@ $('#chat').load('chat.php #chat').fadeIn("slow");
                     $author = $searchAuthor->fetch(PDO::FETCH_ASSOC);
             ?>
                 <p>
-                <fieldset>
-                    <legend>
-                        <b><?= $messages['date_publication']; ?></b>
-                    </legend>
-                    <?php if($author['admin'] > 0) { echo '<b><div style="color: red; display: inline-block">[ADMIN] '.$author['username']; } ?> : <?= $messages['content']; ?></div></b> <a href="?delete=<?= $messages['id']; ?>"><i class="fas fa-times" style="color: red"></i></a>
-                </fieldset>
+                    <fieldset>
+                        <legend>
+                            <b><?= $messages['date_publication']; ?></b>
+                        </legend>
+                        <?php if($author['admin'] > 0) { echo '<b><div style="color: red; display: inline-block">[ADMIN] '.$author['username']; } ?> : <?= $messages['content']; ?></div></b> <a href="?delete=<?= $messages['id']; ?>"><i class="fas fa-times" style="color: red"></i></a>
+                    </fieldset>
                 </p>
             <?php
                 }
