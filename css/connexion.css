@@ -169,11 +169,11 @@ ul  li{
 }
 .container {    
     background-color: #3d4c75;
-    min-height:300px;
+    min-height:550px;
     margin: 1%;
-    margin-top:5%; 
+    margin-top:1%; 
     padding-bottom: 40px;
-    margin-bottom: 4%;
+    margin-bottom: 2%;
     text-align: left;  
     border-radius: 10px;
     border:solid 5px;
@@ -183,11 +183,16 @@ ul  li{
     -o-box-shadow: 5px 5px 5px 0px #41374c;
     box-shadow: 5px 5px 5px 0px #41374c;
     filter:progid:DXImageTransform.Microsoft.Shadow(color=#41374c, Direction=134, Strength=5);
-    max-width:95%;
+    max-width:93%;
+    padding: 1em;
 	
 }
 .container p{
     padding: 1em;
+}
+fieldset{
+    padding: 1em;
+    margin-bottom: 1em;
 }
 
 .indexContainer{

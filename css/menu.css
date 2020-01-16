@@ -6,10 +6,10 @@ header {
 grid-template-columns: 300px 80%;
 }
 
-.navigation {
-  padding-top: 55px;    
+.navigation {   
   grid-area: left;    
-  width: 300px;    
+  width: 300px;  
+  margin-top: 4%;
 }
 
 ul  li{
