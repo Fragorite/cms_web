@@ -87,7 +87,7 @@
         - .... <br />
     </div>
     <div class="btnAddNewsRetour">
-        <a href="">Retour</a>
+        <a href="addNews.php">Retour</a>
     </div>
 </div>
 
