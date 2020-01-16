@@ -37,14 +37,20 @@
                     header('Location: ?id='.$idSubject.'&functionDenied=1');
                 }
             }
-        } else {
-            header('Location: ?id=1');
+            if(isset($_GET['answerDeleteId']) && !empty($_GET['answerDeleteId'])){
+                $answerId = intval($_GET['answerDeleteId']);
+                $select = $db->query('SELECT * FROM frm_answers WHERE id = "'.$answerId.'"');
+                $selectFetch = $select->fetch(PDO::FETCH_ASSOC);
+                if($userInfo['id'] == $selectFetch['id_user']){
+                    $deleteAnswers = $db->query('DELETE FROM frm_answers WHERE id = "'.$answerId.'"');
+                    header('Location: forum.php?id=1&deleteAnswer=1');
+                } else {
+                    header('Location: ?id='.$idSubject.'&functionDenied=1');
+                }
+            }
         }
-    } else {
-        header('Location: ?id=1');
     }
     $searchSubject = $db->query('SELECT * FROM frm_subjects');
-    $subjects = $searchSubject->fetch(PDO::FETCH_ASSOC);
 
 ?>
 
@@ -56,9 +62,11 @@
         <div class="error"><?php if(isset($_GET['functionDenied']) && $_GET['functionDenied'] == 1) { echo $functionDenied; } ?></div>
         <div class="success">
             <?php if(isset($_GET['answerAddSuccess']) && $_GET['answerAddSuccess'] == 1) { echo $answerAddSuccess; } ?>
+            <?php if(isset($_GET['deleteAnswer']) && $_GET['deleteAnswer'] == 1) { echo $deleteAnswerSuccess; } ?>
             <?php if(isset($_GET['delete']) && $_GET['delete'] == 1) { echo $deleteSubjectSuccess; } ?>
             <?php if(isset($_GET['update']) && $_GET['update'] == 1) { echo $updateSubjectSuccess; } ?>
         </div>
+        <?php if(isset($_GET['id'])){ ?>
         <h1>Sujet</h1>
         <h3><?= $infosSubject['title']; ?></h3>
         <p><?= $infosSubject['content']; ?></p><br />
@@ -66,7 +74,7 @@
             <?php
             if(isset($userInfo['id']) && $userInfo['id'] == $authorSubject['id']){
             ?>
-            <a href="addSubject.php?id=<?= $idSubject; ?>">Modifier</a> | <a href="id=<?= $idSubject; ?>&delete=1">Supprimer</a>
+            <a href="addSubject.php?id=<?= $idSubject; ?>">Modifier</a> | <a href="?id=<?= $idSubject; ?>&delete=1">Supprimer</a>
             <br />
             <?php } ?>
             <br/>
@@ -85,7 +93,16 @@
             <fieldset>
                 <?= $answer['content']; ?>
                 <br />
-                <div class="author">Réponse de <b><?= $authorAnswer['username']; ?></b> le <b><?= $answer['date_publication']; ?></b></div>
+                <div class="author">
+                    <?php 
+                        if(isset($userInfo['id']) && $userInfo['id'] == $authorAnswer['id']){
+                    ?>
+                    <a href="#">Modifier</a> | <a href="forum.php?id=<?= $idSubject; ?>&answerDeleteId=<?= $answer['id']; ?>">Supprimer</a><br />
+                    <?php
+                        }
+                    ?>
+                    Réponse de <b><?= $authorAnswer['username']; ?></b> le <b><?= $answer['date_publication']; ?></b>
+                </div>
             </fieldset>
             <br />
         <?php
@@ -105,12 +122,23 @@
         <?php
             }
         ?>
+        <?php } else { ?>
+            Aucun sujet n'a encore été créé ... <br />
+            <b>Soyez le premier à en créer un !</b><br />
+            <a href="addSubject.php">Créer un article</a>
+        <?php } ?>
     </div>
     <!-- --------------------- -->
 
     <!-- CONTENU SECONDARE -->
     <div class="secondBlock">
-
+        <?php
+            while($subjects = $searchSubject->fetch(PDO::FETCH_ASSOC)){
+        ?>
+            <a href="?id=<?= $subjects['id']; ?>"><?= $subjects['title']; ?></a><br />
+        <?php
+            }
+        ?>
     </div>
 </div>
 
