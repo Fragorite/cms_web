@@ -9,6 +9,7 @@
 
 <nav class="navigation">
   <ul class="mainmenu">
+    <li><a href="index.php">Accueil</a></li>
     <li><a href="">Article</a></li>
     <li><a href="">Tchat</a>
       <ul class="submenu">
