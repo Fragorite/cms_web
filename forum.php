@@ -32,7 +32,7 @@
                 if($userInfo['id'] == $authorSubject['id']){
                     $deleteSubject = $db->query('DELETE FROM frm_subjects WHERE id = "'.$idSubject.'"');
                     $deleteAnswers = $db->query('DELETE FROM frm_answers WHERE id_subject = "'.$idSubject.'"');
-                    header('Location: forum.php?id=1&delete=1');
+                    header('Location: forum.php?delete=1');
                 } else {
                     header('Location: ?id='.$idSubject.'&functionDenied=1');
                 }
@@ -43,7 +43,7 @@
                 $selectFetch = $select->fetch(PDO::FETCH_ASSOC);
                 if($userInfo['id'] == $selectFetch['id_user']){
                     $deleteAnswers = $db->query('DELETE FROM frm_answers WHERE id = "'.$answerId.'"');
-                    header('Location: forum.php?id=1&deleteAnswer=1');
+                    header('Location: forum.php?id='.$idSubject.'&deleteAnswer=1');
                 } else {
                     header('Location: ?id='.$idSubject.'&functionDenied=1');
                 }
@@ -66,7 +66,7 @@
             <?php if(isset($_GET['delete']) && $_GET['delete'] == 1) { echo $deleteSubjectSuccess; } ?>
             <?php if(isset($_GET['update']) && $_GET['update'] == 1) { echo $updateSubjectSuccess; } ?>
         </div>
-        <?php if(isset($_GET['id'])){ ?>
+        <?php if(isset($_GET['id'])) { if($subjectExist == 1) { ?>
         <h1>Sujet</h1>
         <h3><?= $infosSubject['title']; ?></h3>
         <p><?= $infosSubject['content']; ?></p><br />
@@ -123,9 +123,10 @@
             }
         ?>
         <?php } else { ?>
-            Aucun sujet n'a encore été créé ... <br />
-            <b>Soyez le premier à en créer un !</b><br />
-            <a href="addSubject.php">Créer un article</a>
+            Veuillez sélectionner un topic sur le menu secondaire ou créer un noveau topic.
+        <?php } ?>
+        <?php } else { ?>
+            Veuillez sélectionner un topic sur le menu secondaire ou créer un noveau topic.
         <?php } ?>
     </div>
     <!-- --------------------- -->
