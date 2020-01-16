@@ -31,12 +31,13 @@ ul  li{
   background-color: #7880af;
   text-decoration: none;
   padding: 10px;
-  color: #41347c;
+  color: whitesmoke;
 }
 
 /* add hover behaviour */
 .mainmenu a:hover {
-    background-color: #3d4c75;
+    background-color: black;
+    color: whitesmoke;
 }
 
 
@@ -56,12 +57,12 @@ ul  li{
 */
 
 .submenu a {
-  background-color: #d4d7e5;
+  background-color: #3d4c75;
 }
 
 /* hover behaviour for links inside .submenu */
 .submenu a:hover {
-  background-color: #3d4c75;
+  background-color: black;
 }
 
 /* this is the initial state of all submenus.
