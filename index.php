@@ -2,7 +2,7 @@
 
 <?php
 
-    $searchNews = $db->query('SELECT * FROM news');
+    $searchNews = $db->query('SELECT * FROM news ORDER BY id DESC');
 
 ?>
 
@@ -25,9 +25,9 @@
                 <?php
                     if(strlen($news['content']) > 200){
                         $content = substr($news['content'], 0, 200);
-                        echo $content."...<a href='news.php?id=".$news['id']."'> Voir la suite </a>";
+                        echo $content."... <a href='news.php?id=".$news['id']."'>[Voir la suite]</a>";
                     } else {
-                        echo $news['content']." | <a href='news.php?id=".$news['id']."'>[Voir l'article] </a> ";
+                        echo $news['content']."<br /><a href='news.php?id=".$news['id']."'>[Voir l'article] </a> ";
                     }
                 ?>
                 <div class="author">Publié le <b><?= $news['date_publication']; ?></b> par <b><?= $userCheck['username']; ?></b></div>
