@@ -2,7 +2,7 @@
 
 <?php
     if(!isset($userInfo['id'])){
-        header('Location: connexion.php');
+        header('Location: connexion.php?accessDenied=1');
     }
     if(isset($_GET['id']) && !empty($_GET['id'])){
         $idNews = intval($_GET['id']);
