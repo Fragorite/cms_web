@@ -34,7 +34,9 @@
     $deleteNewsSuccess = "L'article a bien été supprimé.";
     $updateNewsSuccess = "L'article a été mis à jour.";
 
-    $createAccountValid = "Le compte a été créé. Vous pouvez maintenant vous connecter !";
+    $createAccountValid = "Le compte a été créé. Vous pouvez désormais vous connecter.";
 
     $accessDenied = "Vous devez vous connecter pour accéder à cette fonctionnalité.";
+
+    $forbidden = "Vous n'avez pas accès à cette page.";
 ?>

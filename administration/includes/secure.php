@@ -2,6 +2,6 @@
 
 <?php
     if(!isset($_SESSION['id']) || $userInfo['admin'] < 1){
-        header('Location: ../index.php');
+        header('Location: ../index.php?forbidden=1');
     }
 ?>

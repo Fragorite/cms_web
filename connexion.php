@@ -42,7 +42,7 @@
                             'username' => $userNameRegister,
                             'password' => $crypt
                         ));
-                        header('Location: index.php');
+                        header('Location: connexion.php?createAccountValid=1');
                     } else {
                         $error = "Les mots de passes ne correspondent pas !";
                     }
@@ -73,6 +73,10 @@
                 if(!isset($_GET['registred'])){
             ?>
             <div class="containerConnect">
+                <div class="error"><?php if(isset($_GET['accessDenied']) && $_GET['accessDenied'] == 1) { echo $accessDenied; } ?></div>
+                    
+                <div class="success"><?php if(isset($_GET['createAccountValid']) && $_GET['createAccountValid'] == 1) { echo $createAccountValid; } ?></div>
+                
                 <h1>Connexion</h1>
                 <form action="" method="POST" class="connexion">
                     <div class="formConnexion">

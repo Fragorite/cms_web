@@ -1,6 +1,9 @@
 <?php include('includes/header.php'); // Haut de page ?>
 
 <?php
+    if(!isset($userInfo['id'])){
+        header('Location: connexion.php?accessDenied=1');
+    }
     if(isset($_GET['id']) && !empty($_GET['id'])){
         $searchNews = $db->query('SELECT * FROM news WHERE id = "'.$_GET['id'].'"');
         $countNews = $searchNews->rowCount();
@@ -56,10 +59,6 @@
         }
     }
 ?>
-
-<?php 
-    if(isset($userInfo['id'])){ 
-?>
 <title><?= $infosSite['websiteName']; ?> - Créer/Modifier une news</title>
 
 <div class="container">
@@ -91,8 +90,3 @@
 
 
 <?php include('includes/footer.php'); // Pied de page ?> 
-<?php 
-    } else {
-        header('Location: index.php');
-    }
-?>
