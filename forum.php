@@ -110,7 +110,12 @@
 
     <!-- CONTENU SECONDARE -->
     <div class="secondBlock">
-
+        <div class="btnAddTopic">
+        <a href="">Créer un sujet</a>
+    </div>
+    </div>
+    <div class="btnAddNewsRetour">
+        <a href="index.php">Retour</a>
     </div>
 </div>
 
