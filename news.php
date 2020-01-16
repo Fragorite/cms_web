@@ -16,7 +16,9 @@
                 header('Location: index.php?deleteNews=1');
             } else {
                 header('Location: news.php?id='.$article['id']);
-            }
+            } 
+        } else {
+            $error = "Vous n'avez pas accès à cette fonctionnalité.";
         }
     } else {
         header('Location: index.php');
@@ -29,7 +31,7 @@
 <div class="container">
     <!-- CONTENU GLOBAL -->
     <div class="firstBlock">
-
+        <div class="error"><?php if(isset($_GET['forbidden']) && $_GET['forbidden'] == 1) { echo $error; } ?></div>
         <h1><?= $article['title']; ?></h1>
         <p><?= $article['content']; ?></p>
 
