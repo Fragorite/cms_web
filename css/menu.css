@@ -3,7 +3,7 @@ header {
     display: grid;
     grid-template-areas: "left  centre"
                         "left  centre" ;
-grid-template-columns: 300px 1100px;
+grid-template-columns: 300px 80%;
 }
 
 .navigation {
