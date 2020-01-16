@@ -1,32 +1,33 @@
-<?php include('includes/config.php'); // Configuration générale ?> 
 <?php include('includes/header.php'); // Haut de page ?>
+
+<?php
+
+    if(!isset($userInfo['id'])){
+        header('Location: connexion.php?accessDenied=1');
+    }
+
+?>
 
 <title><?= $infosSite['websiteName']; ?> - Chat</title>
 
 <div class="container">
-
-    <?php
-        if($infosSite['template'] == 1) {
-            $firstBlock = "rightBlock";
-            $secondBlock = "leftBlock";
-        }
-        if($infosSite['template'] == 2){
-            $firstBlock = "leftBlock";
-            $secondBlock = "rightBlock";
-        }
-    ?>
     <!-- CONTENU GLOBAL -->
-    <div class="<?= $firstBlock; ?>">
+    <div class="firstBlock">
 
-        
+        <fieldset>
+            <legend>
+
+            </legend>
+        </fieldset>
 
     </div>
     <!-- --------------------- -->
-    <!-- MENU DROITE OU GAUCHE -->
-    <div class="<?= $secondBlock ?>">
 
-
+    <!-- CONTENU SECONDAIRE -->
+    <div class="secondBlock">
+        
     </div>
 </div>
+
 
 <?php include('includes/footer.php'); // Pied de page ?> 
