@@ -1,7 +1,7 @@
 .container {
     display: grid;
     grid-template-areas: "firstBlock  secondBlock";
-    grid-template-columns: 75% 25%;
+    grid-template-columns: 70% 25%;
     align-items: start;
     column-gap: 1em;
     width:95.4%;
@@ -11,17 +11,20 @@
     padding-top: 3%;
     
 }
-
 .firstBlock{
+    grid-area: firstBlock;
     background-color: 7880af;
     padding: 1em;
     border-bottom-right-radius: 50px;
     border-top-left-radius: 50px;
-    
+    overflow: scroll;
     min-height: 400px;
+    background-color: white;
+    
     }
 
 .secondBlock{
+    grid-area: secondBlock;
      background-color: 7880af;
      padding: 1em;
      border-top-right-radius: 50px;
@@ -29,7 +32,7 @@
     padding-right: 25%;
     height:96%;
     min-height: 400px;
-    width:63%;
+    overflow: scroll;
        
     }
 
