@@ -62,13 +62,16 @@
         <h1>Sujet</h1>
         <h3><?= $infosSubject['title']; ?></h3>
         <p><?= $infosSubject['content']; ?></p><br />
-        <?php
-        if(isset($userInfo['id']) && $userInfo['id'] == $authorSubject['id']){
-        ?>
-        <a href="addSubject.php?id=<?= $idSubject; ?>">Modifier</a> | <a href="id=<?= $idSubject; ?>&delete=1">Supprimer</a>
-        <br />
-        <?php } ?>
-        <br/>Rédigé par <b><?= $authorSubject['username']; ?></b> le <b><?= $infosSubject['date_publication']; ?></b></div>
+        <div class="author">
+            <?php
+            if(isset($userInfo['id']) && $userInfo['id'] == $authorSubject['id']){
+            ?>
+            <a href="addSubject.php?id=<?= $idSubject; ?>">Modifier</a> | <a href="id=<?= $idSubject; ?>&delete=1">Supprimer</a>
+            <br />
+            <?php } ?>
+            <br/>
+            Rédigé par <b><?= $authorSubject['username']; ?></b> le <b><?= $infosSubject['date_publication']; ?></b>
+        </div>
         <hr>
         <h2>Réponses</h2>
         <?php
