@@ -132,20 +132,23 @@
 
     <!-- CONTENU SECONDARE -->
     <div class="secondBlock">
-        <?php
+        
+        
+        <div class="btnAddTopic">
+            <?php
             while($subjects = $searchSubject->fetch(PDO::FETCH_ASSOC)){
         ?>
-            <a href="?id=<?= $subjects['id']; ?>"><?= $subjects['title']; ?></a><br />
+            <a class="btnAddTopic" href="?id=<?= $subjects['id']; ?>" ><?= $subjects['title']; ?></a><br />
         <?php
             }
         ?>
-        <div class="btnAddTopic">
-        <a href="">Créer un sujet</a>
+        <hr>
+            <a href="">Créer un sujet</a><br/>
+        
+            <a href="index.php">Retour</a>
+        </div>
     </div>
-    </div>
-    <div class="btnAddNewsRetour">
-        <a href="index.php">Retour</a>
-    </div>
+   
 </div>
 
 <?php include('includes/footer.php'); // Pied de page ?> 
