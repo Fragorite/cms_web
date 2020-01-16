@@ -183,6 +183,7 @@ ul  li{
     -o-box-shadow: 5px 5px 5px 0px #41374c;
     box-shadow: 5px 5px 5px 0px #41374c;
     filter:progid:DXImageTransform.Microsoft.Shadow(color=#41374c, Direction=134, Strength=5);
+    width:95%;
 	
 }
 .indexContainer{
