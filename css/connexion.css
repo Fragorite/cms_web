@@ -186,6 +186,10 @@ ul  li{
     max-width:95%;
 	
 }
+.container p{
+    padding: 1em;
+}
+
 .indexContainer{
     
     background-color: #3d4c75;
