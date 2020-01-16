@@ -27,6 +27,7 @@ input{
     background:#d4d7e5;
     margin-bottom: 25px;
     text-align: center;
+    max-width: 980px;
 }
 .form-example {
 	grid-area: inscription;
@@ -284,9 +285,15 @@ text-transform: uppercase;
     margin-bottom: 2em;
 }
 
+textarea{
+    margin-top: 2em;
+    margin-bottom: 2em;
+    max-width: 900px;
+}
+
 /*/////////////////////////////////////////////////changement de taille///////////////////////////////////////////////*/
 
-@media (max-width: 800px) { 
+@media (max-width: 600px) { 
 
 .main{
     display: grid;
@@ -326,10 +333,7 @@ text-transform: uppercase;
    }
     
 .navigationHead {
-display: flex; /* 1 */
-flex-flow: row wrap; /* 2 */
-flex-direction:column;
-justify-content: space-around;    
+  
 list-style: none;
 padding: 0;
 margin: 0;
@@ -337,6 +341,40 @@ background-color: #242a31;
 max-height: 80px;
 margin-bottom: 2%;
 }
+.container {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 1em;
+    width:95.4%;
+    margin-left: 0px;
+    padding-left: 10px;
+    margin-top: 1%;
+    padding-top: 3%;
+
+}
+
+.firstBlock{
+    
+    background-color: 7880af;
+    padding: 1em;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 50px;
+    min-height: 400px;
+    width:94%;
+    
+   
+}
+
+.secondBlock{
+     background-color: 7880af;
+     padding: 1em;
+     border-top-right-radius: 100px;
+     border-bottom-left-radius: 50px;
+     min-height: 400px;
+     order:-1;
+    
+}
+
 
 }
 
