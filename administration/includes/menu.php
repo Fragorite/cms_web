@@ -5,7 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link rel="stylesheet" href="../css/connexion.css">
 <link rel="stylesheet" href="../css/menu.css">
-<link href="https://fonts.googleapis.com/css?family=Raleway:400,600&display=swap" rel="stylesheet"> 
+<link href="https://fonts.googleapis.com/css?family=Raleway:400,600&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/66ccac3552.js" crossorigin="anonymous"></script>
 
 <nav class="navigation">
   <ul class="mainmenu">

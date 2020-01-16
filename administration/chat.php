@@ -18,30 +18,32 @@
     <?php include('includes/menu.php'); ?>
 
     <div class="container">
-        <?php
-            $searchMessages = $db->query('SELECT * FROM chat_messages ORDER BY id DESC LIMIT '.$launch.','.$messagesPerPage);
-            while($messages = $searchMessages->fetch(PDO::FETCH_ASSOC)){
-                $searchAuthor = $db->query('SELECT * FROM users WHERE id = "'.$messages['id_user'].'"');
-                $author = $searchAuthor->fetch(PDO::FETCH_ASSOC);
-        ?>
-            <fieldset>
-                <legend>
-                    <b><?= $messages['date_publication']; ?></b>
-                </legend>
-                <b><?= $author['username']; ?> : </b><?= $messages['content']; ?>
-            </fieldset>
-        <?php
-            }
-        ?>
-        <?php
-            for($i=1;$i<=$totalPages;$i++) {
-                if($i == $currentPage) {
-                    echo $i.' ';
-                } else {
-                    echo '<a href="chat.php?page='.$i.'">'.$i.'</a> ';
+        <p>
+            <?php
+                $searchMessages = $db->query('SELECT * FROM chat_messages ORDER BY id DESC LIMIT '.$launch.','.$messagesPerPage);
+                while($messages = $searchMessages->fetch(PDO::FETCH_ASSOC)){
+                    $searchAuthor = $db->query('SELECT * FROM users WHERE id = "'.$messages['id_user'].'"');
+                    $author = $searchAuthor->fetch(PDO::FETCH_ASSOC);
+            ?>
+                <fieldset>
+                    <legend>
+                        <b><?= $messages['date_publication']; ?></b>
+                    </legend>
+                    <b><?= $author['username']; ?> : </b><?= $messages['content']; ?> <a href="?delete=<?= $messages['id']; ?>"><i class="fas fa-times" style="color: red"></i></a>
+                </fieldset>
+            <?php
                 }
-            }
-        ?>
+            ?>
+            <?php
+                for($i=1;$i<=$totalPages;$i++) {
+                    if($i == $currentPage) {
+                        echo $i.' ';
+                    } else {
+                        echo '<a href="chat.php?page='.$i.'">'.$i.'</a> ';
+                    }
+                }
+            ?>
+        </p>
     </div>
 </header>
 
