@@ -29,3 +29,22 @@ color:#d4d7e5;
     text-shadow: 1px 0px 20px white; 
     font-size: 22px;
 }
+
+.newArticle a{
+    display: block;
+padding: 1em;
+text-decoration: none;
+text-align: center;
+color:#d4d7e5;
+-webkit-transition: font-size .5s ease;
+-moz-transition: font-size .5s ease;
+-o-transition: font-size .5s ease;
+transition: font-size .5s ease;  
+text-transform: uppercase;
+}
+
+.newArticle a:hover{
+    text-shadow: 1px 0px 20px white; 
+    font-size: 22px;
+    text-transform: uppercase;
+}

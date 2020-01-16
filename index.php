@@ -10,6 +10,7 @@
 
 <div class="indexContainer">
     <!-- CONTENU GLOBAL -->
+        <div class="newArticle"><a href="#">Créez un article</a></div>
     <div class="indexBlock">
         <div class="success">
             <?php 
