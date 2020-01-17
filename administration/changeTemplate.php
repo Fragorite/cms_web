@@ -22,11 +22,11 @@
     }
 
 ?>
-
+<div class="chatAdmin">
 <header class="headerMenu">
     <?php include('includes/menu.php'); ?>
-
-    <div class="container">
+</header>
+    <div class="container adapteTaille" >
         <h1>Changer le template</h1>
         <p>
             <form method="POST">
@@ -51,6 +51,6 @@
             </center>
         </p>
     </div>
-</header>
 
+    </div>
 

@@ -34,11 +34,11 @@
     }
 
 ?>
-
+<div class="chatAdmin">
 <header class="headerMenu">
     <?php include('includes/menu.php'); ?>
-
-    <div class="container">
+</header>
+    <div class="container adapteTaille">
         <h1>Modifier une news</h1>
         <form method="POST">
             <input type="text" name="titleAdd" value="<?= $news['title']; ?>" placeholder="Entrez le titre">
@@ -46,6 +46,6 @@
             <input type="submit" value="Modifier" name="formUpdateNews">
         </form>
     </div>
-</header>
+</div>
 
 

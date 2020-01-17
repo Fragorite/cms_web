@@ -164,8 +164,17 @@ ul  li{
   transition: all 0.5s ease-out;
 }
 .author{
-    text-align: right;
-    
+    text-align: right;   
+}
+.author a{
+    text-decoration: none;
+  padding: 10px;
+  color: whitesmoke;
+}
+.author a:hover {
+    background-color: black;
+    opacity: 0.5;
+    color: whitesmoke;
 }
 .container {   
     background-color: #3d4c75;
