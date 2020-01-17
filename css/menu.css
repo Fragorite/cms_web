@@ -1,11 +1,20 @@
 /* define a fixed width for the entire menu */
+.chatAdmin{
+    display:grid;
+    grid-template-areas: "menuLeft containerRight";
+    grid-area: centre;
+}
 header {
     display: grid;
-    grid-template-areas: "left  centre"
-                        "left  centre" ;
-grid-template-columns: 300px 80%;
+    grid-area: menuLeft;
+    grid-template-areas: "left"
+                        "left" ;
+grid-template-columns: 300px;
 }
-
+.container{
+    grid-area: containerRight;
+    
+}
 .navigation {   
   grid-area: left;    
   width: 300px;  
