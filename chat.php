@@ -5,7 +5,6 @@
     if(!isset($userInfo['id'])){
         header('Location: connexion.php?accessDenied=1');
     }
-    $searchChatMessages = $db->query('SELECT * FROM chat_messages ORDER BY id DESC');
     if(isset($_POST['formAddMessage'])){
         if(!empty($_POST['contentAdd'])){
             if(strlen($_POST['contentAdd']) < 255){
@@ -56,6 +55,7 @@ $('#usersConnected').load('chat.php #usersConnected').fadeIn("slow");
         <div id="chat" class="firstBlock">
         
             <?php
+                $searchChatMessages = $db->query('SELECT * FROM chat_messages ORDER BY id DESC');
                 while($chatMessage = $searchChatMessages->fetch(PDO::FETCH_ASSOC)){
                     $searchAuthor = $db->query('SELECT * FROM users WHERE id = "'.$chatMessage['id_user'].'"');
                     $author = $searchAuthor->fetch(PDO::FETCH_ASSOC);
@@ -64,7 +64,7 @@ $('#usersConnected').load('chat.php #usersConnected').fadeIn("slow");
                 <legend>
                     <b><?= $chatMessage['date_publication']; ?></b>
                 </legend>
-                <?php if($author['admin'] > 0) { echo '<b><div style="color:red; display: inline-block">[ADMIN] '.$author['username']; } ?> : <?= $chatMessage['content']; ?></b>
+                <?php if($author['admin'] > 0) { echo '<b><div style="color:red; display: inline-block">[ADMIN] '.$author['username']; } else { echo '<b>'.$author['username'].'</b>'; } ?> : <?= $chatMessage['content']; ?></b>
             </fieldset>
             <?php
                 }

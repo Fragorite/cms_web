@@ -1,7 +1,6 @@
 <?php include('../includes/config.php'); // Configuration générale ?>
 
 <?php
-    $messagesPerPage = 20;
     if(isset($_POST['formMessageAdd'])){
         if(!empty($_POST['contentAdd'])){
             if(strlen($_POST['contentAdd']) < 255){
@@ -30,12 +29,6 @@
             header('Location: chat.php?deleted=1');
         }
     }
-    $messagesPerPage = 10;
-    $messagesAllsReq = $db->query('SELECT id FROM chat_messages');
-    $messagesCount = $messagesAllsReq->rowCount();
-    $totalPages = ceil($messagesCount/$messagesPerPage);
-@ -14,23 +42,42 @@
-    $launch = ($currentPage-1)*$messagesPerPage;
 ?>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
@@ -63,7 +56,7 @@ $('#chat').load('chat.php #chat').fadeIn("slow");
         <div id="chat" class="firstBlock">
            
             <?php
-                $searchMessages = $db->query('SELECT * FROM chat_messages ORDER BY id DESC LIMIT '.$launch.','.$messagesPerPage);
+                $searchMessages = $db->query('SELECT * FROM chat_messages ORDER BY id DESC');
                 while($messages = $searchMessages->fetch(PDO::FETCH_ASSOC)){
                     $searchAuthor = $db->query('SELECT * FROM users WHERE id = "'.$messages['id_user'].'"');
                     $author = $searchAuthor->fetch(PDO::FETCH_ASSOC);
@@ -74,15 +67,11 @@ $('#chat').load('chat.php #chat').fadeIn("slow");
                         <legend>
                             <b><?= $messages['date_publication']; ?></b>
                         </legend>
-                        <?php if($author['admin'] > 0) { echo '<b><div style="color: red;">[ADMIN] '.$author['username'].'</div>'; } ?> : <?= $messages['content']; ?></b> <a href="?delete=<?= $messages['id']; ?>"><i class="fas fa-times" style="color: red"></i></a>
+                        <?php if($author['admin'] > 0) { echo '<b><div style="color: red;">[ADMIN] '.$author['username'].'</div>'; } else { echo '<b>'.$author['username'].'</b>'; } ?> : <?= $messages['content']; ?></b> <a href="?delete=<?= $messages['id']; ?>"><i class="fas fa-times" style="color: red"></i></a>
                     </fieldset>
 
                 </p>
             <?php
-                }
-            ?>
-
-                    }
                 }
             ?>
         </p>
