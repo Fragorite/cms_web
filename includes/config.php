@@ -63,4 +63,8 @@
     $answerAddSuccess = "Votre réponse a bien été ajoutée.";
 
     $functionDenied = "Vous n'avez pas accès à cette fonctionnalité.";
+
+    // ADMINISTRATION
+
+    $changeTemplateSuccess = "Le template du site a été changé avec succès.";
 ?>

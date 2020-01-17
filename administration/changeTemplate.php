@@ -43,8 +43,8 @@
                     </tr>
                     <tr>
 
-                        <td><input type="radio" name="templateChoice" value="tmp1"></td>
-                        <td><input type="radio" name="templateChoice" value="tmp2"></td>
+                        <td><input type="radio" name="templateChoice" value="tmp1" <?php if($websiteConfig['template'] == 1){ echo "checked='checked'"; } ?>></td>
+                        <td><input type="radio" name="templateChoice" value="tmp2" <?php if($websiteConfig['template'] == 2){ echo "checked='checked'"; } ?>></td>
                     </tr>
                 <table>
                 <input type="submit" name="formTemplateChange" value="Mettre à jour">
