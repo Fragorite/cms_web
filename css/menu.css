@@ -13,11 +13,12 @@
 }
 .container{
     grid-area: containerRight;
+    min-width: 950px;
     
 }
 .adapteTaille{
     min-width: 1000px;
-    margin-left: -50px;
+    margin-left: -30px;
 }
 .navigation {   
   grid-area: left;    
