@@ -53,23 +53,23 @@ $('#usersConnected').load('chat.php #usersConnected').fadeIn("slow");
             <input type="submit" name="formAddMessage" value="Envoyer">
         </form>
         <hr>
-        <div id="chat">
+        
             <?php
                 while($chatMessage = $searchChatMessages->fetch(PDO::FETCH_ASSOC)){
                     $searchAuthor = $db->query('SELECT * FROM users WHERE id = "'.$chatMessage['id_user'].'"');
                     $author = $searchAuthor->fetch(PDO::FETCH_ASSOC);
             ?>
-            <fieldset>
+            <fieldset class="monTest">
                 <legend>
                     <b><?= $chatMessage['date_publication']; ?></b>
                 </legend>
-                <?php if($author['admin'] > 0) { echo '<b><div style="color:red; display: inline-block">[ADMIN] '.$author['username']; } ?> : <?= $chatMessage['content']; ?></div></b>
+                <?php if($author['admin'] > 0) { echo '<b><div style="color:red; display: inline-block">[ADMIN] '.$author['username']; } ?> : <?= $chatMessage['content']; ?></b>
             </fieldset>
             <?php
                 }
             ?>
         </div>
-    </div>
+   
     <!-- --------------------- -->
 
     <!-- CONTENU SECONDAIRE -->
@@ -84,6 +84,6 @@ $('#usersConnected').load('chat.php #usersConnected').fadeIn("slow");
         </div>
     </div>
 </div>
-
+ 
 
 <?php include('includes/footer.php'); // Pied de page ?> 

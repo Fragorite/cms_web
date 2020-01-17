@@ -1,6 +1,7 @@
 <?php include('../includes/config.php'); // Configuration générale ?>
 
 <?php
+    $messagesPerPage = 20;
     if(isset($_POST['formMessageAdd'])){
         if(!empty($_POST['contentAdd'])){
             if(strlen($_POST['contentAdd']) < 255){
@@ -33,12 +34,7 @@
     $messagesAllsReq = $db->query('SELECT id FROM chat_messages');
     $messagesCount = $messagesAllsReq->rowCount();
     $totalPages = ceil($messagesCount/$messagesPerPage);
-    if(isset($_GET['page']) AND !empty($_GET['page']) AND $_GET['page'] > 0 AND $_GET['page'] <= $totalPages) {
-        $_GET['page'] = intval($_GET['page']);
-        $currentPage = $_GET['page'];
-    } else {
-        $currentPage = 1;
-    }
+@ -14,23 +42,42 @@
     $launch = ($currentPage-1)*$messagesPerPage;
 ?>
 
@@ -54,6 +50,7 @@ $('#chat').load('chat.php #chat').fadeIn("slow");
 <header class="headerMenu">
 
     <?php include('includes/menu.php'); ?>
+</header>
 
     <div class="container">
         <p><div class="success"><?php if(isset($_GET['deleted']) && !empty($_GET['deleted'])) { echo $deleteMessageSuccess; } ?></div></p>
@@ -63,7 +60,8 @@ $('#chat').load('chat.php #chat').fadeIn("slow");
                 <input type="submit" name="formMessageAdd" value="Envoyer"/>
             </form>
         </p>
-        <div id="chat">
+        <div id="chat" class="firstBlock">
+           
             <?php
                 $searchMessages = $db->query('SELECT * FROM chat_messages ORDER BY id DESC LIMIT '.$launch.','.$messagesPerPage);
                 while($messages = $searchMessages->fetch(PDO::FETCH_ASSOC)){
@@ -71,27 +69,23 @@ $('#chat').load('chat.php #chat').fadeIn("slow");
                     $author = $searchAuthor->fetch(PDO::FETCH_ASSOC);
             ?>
                 <p>
+
                     <fieldset>
                         <legend>
                             <b><?= $messages['date_publication']; ?></b>
                         </legend>
                         <?php if($author['admin'] > 0) { echo '<b><div style="color: red;">[ADMIN] '.$author['username'].'</div>'; } ?> : <?= $messages['content']; ?></b> <a href="?delete=<?= $messages['id']; ?>"><i class="fas fa-times" style="color: red"></i></a>
                     </fieldset>
+
                 </p>
             <?php
                 }
             ?>
-            <?php
-                for($i=1;$i<=$totalPages;$i++) {
-                    if($i == $currentPage) {
-                        echo $i.' ';
-                    } else {
-                        echo '<a href="chat.php?page='.$i.'">'.$i.'</a> ';
+
                     }
                 }
             ?>
+        </p>
         </div>
     </div>
 </header>
-
-
