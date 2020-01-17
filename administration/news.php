@@ -29,6 +29,7 @@
         <?php 
             if(isset($_GET['id']) && !empty($_GET['id'])) { 
         ?>
+            <div class="success"><?php if(isset($_GET['updateNews']) && $_GET['updateNews'] == 1) { echo $updateNewsSuccess; } ?></div>
             <h1><?= $news['title']; ?></h1>
             <p>
                 <?= $news['content']; ?>

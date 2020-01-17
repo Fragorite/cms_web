@@ -38,5 +38,6 @@
         <?php } else { ?>
         <li><a href="connexion.php">Connexion/Inscription</a></li>
         <?php } ?>
+        
     </ul>
 </div>

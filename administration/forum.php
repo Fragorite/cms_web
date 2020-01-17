@@ -106,8 +106,10 @@
             </form>
             <?php
                 }
-
             } else {
+            ?>
+            <h1>Liste des topics</h1>
+            <?php
                 while($subjectsFetch = $allSubjects->fetch(PDO::FETCH_ASSOC)){
                     $searchAuthor = $db->query('SELECT * FROM users WHERE id = "'.$subjectsFetch['id_user'].'"');
                     $author = $searchAuthor->fetch(PDO::FETCH_ASSOC);
@@ -116,7 +118,6 @@
                 <?php if(isset($_GET['deleteSubject']) && !empty($_GET['deleteSubject'])) { echo $deleteSubjectSuccess; } ?>
                 <?php if(isset($_GET['deleteAnswer']) && !empty($_GET['deleteAnswer'])) { echo $deleteAnswerSuccess; } ?>
             </div>
-            <h1>Liste des topics</h1>
             <fieldset>
                 <legend>
                     Auteur : <b><?= $author['username']; ?></b>

@@ -3,8 +3,9 @@
     {
         session_start();
     }
-    $userNameDb = "root";   // Nom d'utilisateur de la base de donnée
-    $passWordDb = "";       // Mot de passe de la base de donnée
+    $userNameDb = 'root';   // Nom d'utilisateur de la base de donnée
+    $passWordDb = '';       // Mot de passe de la base de donnée
+    
 
     try {
         $db = new PDO('mysql:host=localhost;dbname=cms_web', $userNameDb, $passWordDb);

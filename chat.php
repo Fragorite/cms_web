@@ -79,7 +79,11 @@ $('#usersConnected').load('chat.php #usersConnected').fadeIn("slow");
             <?php
                 $searchUsers = $db->query('SELECT * FROM users WHERE connected = 1 ORDER BY username');
                 while($userConnected = $searchUsers->fetch(PDO::FETCH_ASSOC)){
-                    echo '<b>'.$userConnected['username'].'</b><br/>';
+                    if($userConnected['admin'] != 0) {
+                        echo '<b><font color=red>[ADMIN] '.$userConnected['username'].'</font></b><br/>';
+                    } else {
+                        echo '<b>'.$userConnected['username'].'</b><br/>';
+                    }
                 }
             ?>
         </div>

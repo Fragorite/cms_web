@@ -55,7 +55,7 @@ $('#chat').load('chat.php #chat').fadeIn("slow");
 
         <div class="firstBlock">
 
-           
+           <div id="chat">
             <?php
                 $searchMessages = $db->query('SELECT * FROM chat_messages ORDER BY id DESC');
                 while($messages = $searchMessages->fetch(PDO::FETCH_ASSOC)){
@@ -71,6 +71,7 @@ $('#chat').load('chat.php #chat').fadeIn("slow");
             <?php
                 }
             ?>
+            </div>
         </div>
     </div>
 
