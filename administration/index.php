@@ -4,7 +4,10 @@
     <?php include('includes/menu.php'); ?>
 
     <div class="container">
-        <div class="success"><?php if(isset($_GET['templateChoice']) && $_GET['templateChoice'] == 1) { echo $changeTemplateSuccess; } ?></div>
+        <div class="success">  
+            <?php if(isset($_GET['nameUpdate']) && $_GET['nameUpdate'] == 1) { echo $changeNameSuccess; } ?>
+            <?php if(isset($_GET['templateChoice']) && $_GET['templateChoice'] == 1) { echo $changeTemplateSuccess; } ?>
+        </div>
         <h1>Bienvenue sur le panel administrateur <div class="error"><?= $userInfo['username']; ?></div></h1>
         <p>
             Grâce à ce panel, vous pouvez :<br/>

@@ -67,4 +67,5 @@
     // ADMINISTRATION
 
     $changeTemplateSuccess = "Le template du site a été changé avec succès.";
+    $changeNameSuccess = "Le nom du site a été changé avec succès.";
 ?>
