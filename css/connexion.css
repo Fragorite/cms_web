@@ -184,15 +184,15 @@ ul  li{
     box-shadow: 5px 5px 5px 0px #41374c;
     filter:progid:DXImageTransform.Microsoft.Shadow(color=#41374c, Direction=134, Strength=5);
     /*max-width:93%;*/
-    padding: 1em;
-	
+    padding: 1em;	
 }
+
 .container p{
     padding: 1em;
 }
 fieldset{
-    padding: 1em;
-    margin-bottom: 1em;
+    /*padding: 1em;*/
+    /*margin-bottom: 1em;*/
 }
 
 .indexContainer{

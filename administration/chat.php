@@ -39,12 +39,12 @@ function ()
 $('#chat').load('chat.php #chat').fadeIn("slow");
 }, 1000); // REFRESH (en millisecondes)
 </script>
-
+<div class="chatAdmin">
 <header class="headerMenu">
 
     <?php include('includes/menu.php'); ?>
 </header>
-
+    
     <div class="container">
         <p><div class="success"><?php if(isset($_GET['deleted']) && !empty($_GET['deleted'])) { echo $deleteMessageSuccess; } ?></div></p>
         <p>
@@ -53,7 +53,7 @@ $('#chat').load('chat.php #chat').fadeIn("slow");
                 <input type="submit" name="formMessageAdd" value="Envoyer"/>
             </form>
         </p>
-        <div id="chat" class="firstBlock">
+        <div  class="firstBlock">
            
             <?php
                 $searchMessages = $db->query('SELECT * FROM chat_messages ORDER BY id DESC');
@@ -78,3 +78,4 @@ $('#chat').load('chat.php #chat').fadeIn("slow");
         </div>
     </div>
 </header>
+</div>
