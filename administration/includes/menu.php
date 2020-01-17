@@ -21,7 +21,7 @@
     <li><a href="">Gestion du site</a>
       <ul class="submenu">
         <li><a href="changeTemplate.php">Template</a></li>
-        <li><a href="">Nom du site</a></li>
+        <li><a href="changeName.php">Nom du site</a></li>
       </ul></li>
     <li><a href="../index.php">Retour</a></li>
   </ul>

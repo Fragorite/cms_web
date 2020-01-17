@@ -46,14 +46,12 @@ $('#chat').load('chat.php #chat').fadeIn("slow");
 </header>
 
     <div class="container">
-        <p><div class="success"><?php if(isset($_GET['deleted']) && !empty($_GET['deleted'])) { echo $deleteMessageSuccess; } ?></div></p>
-        <p>
+        <div class="success"><?php if(isset($_GET['deleted']) && !empty($_GET['deleted'])) { echo $deleteMessageSuccess; } ?></div>
             <form method="POST">
                 <input type="text" name="contentAdd" placeholder="Entrez votre message ..."/>
                 <input type="submit" name="formMessageAdd" value="Envoyer"/>
             </form>
-        </p>
-        <div id="chat" class="firstBlock">
+        <div class="firstBlock">
            
             <?php
                 $searchMessages = $db->query('SELECT * FROM chat_messages ORDER BY id DESC');
@@ -61,20 +59,15 @@ $('#chat').load('chat.php #chat').fadeIn("slow");
                     $searchAuthor = $db->query('SELECT * FROM users WHERE id = "'.$messages['id_user'].'"');
                     $author = $searchAuthor->fetch(PDO::FETCH_ASSOC);
             ?>
-                <p>
-
                     <fieldset>
                         <legend>
                             <b><?= $messages['date_publication']; ?></b>
                         </legend>
                         <?php if($author['admin'] > 0) { echo '<b><div style="color: red;">[ADMIN] '.$author['username'].'</div>'; } else { echo '<b>'.$author['username'].'</b>'; } ?> : <?= $messages['content']; ?></b> <a href="?delete=<?= $messages['id']; ?>"><i class="fas fa-times" style="color: red"></i></a>
                     </fieldset>
-
-                </p>
             <?php
                 }
             ?>
-        </p>
         </div>
     </div>
 </header>
