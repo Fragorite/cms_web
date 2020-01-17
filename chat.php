@@ -52,6 +52,7 @@ $('#usersConnected').load('chat.php #usersConnected').fadeIn("slow");
             <input type="submit" name="formAddMessage" value="Envoyer">
         </form>
         <hr>
+        <div id="chat" class="firstBlock">
         
             <?php
                 $searchChatMessages = $db->query('SELECT * FROM chat_messages ORDER BY id DESC');
@@ -68,7 +69,7 @@ $('#usersConnected').load('chat.php #usersConnected').fadeIn("slow");
             <?php
                 }
             ?>
-        </div>
+        </div></div>
    
     <!-- --------------------- -->
 
