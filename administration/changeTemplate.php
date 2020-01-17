@@ -42,7 +42,6 @@
                         <td><img src="../img/template2.jpg" width="400px" height="350px"></td>
                     </tr>
                     <tr>
-
                         <td><input type="radio" name="templateChoice" value="tmp1" <?php if($websiteConfig['template'] == 1){ echo "checked='checked'"; } ?>></td>
                         <td><input type="radio" name="templateChoice" value="tmp2" <?php if($websiteConfig['template'] == 2){ echo "checked='checked'"; } ?>></td>
                     </tr>
