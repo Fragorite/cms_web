@@ -169,7 +169,7 @@ ul  li{
 .author a{
     text-decoration: none;
   padding: 10px;
-  color: whitesmoke;
+  color: black;
 }
 .author a:hover {
     background-color: black;
