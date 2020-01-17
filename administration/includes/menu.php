@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="../css/menu.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,600&display=swap" rel="stylesheet">
 <script src="https://kit.fontawesome.com/66ccac3552.js" crossorigin="anonymous"></script>
+<title><?= $infosSite['websiteName']; ?> - Administration</title>
 
 <nav class="navigation">
   <ul class="mainmenu">

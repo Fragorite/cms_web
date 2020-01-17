@@ -5,10 +5,6 @@
     }
     $userNameDb = 'root';   // Nom d'utilisateur de la base de donnée
     $passWordDb = '';       // Mot de passe de la base de donnée
-    
-    function permissions($name){
-        echo "<font color=red><b>[ADMIN] ".$name."</b></font>";
-    }
 
     try {
         $db = new PDO('mysql:host=localhost;dbname=cms_web', $userNameDb, $passWordDb);

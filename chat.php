@@ -64,7 +64,7 @@ $('#usersConnected').load('chat.php #usersConnected').fadeIn("slow");
                 <legend>
                     <b><?= $chatMessage['date_publication']; ?></b>
                 </legend>
-                <?php if($author['admin'] > 0) { permissions($author['username']); } else { echo '<b>'.$author['username'].'</b>'; } ?> : <?= $chatMessage['content']; ?>
+                <?php if($author['admin'] > 0) { echo '<b><div style="color:red; display: inline-block">[ADMIN] '.$author['username']; } else { echo '<b>'.$author['username'].'</b>'; } ?> : <?= $chatMessage['content']; ?></b>
             </fieldset>
             <?php
                 }
@@ -76,13 +76,12 @@ $('#usersConnected').load('chat.php #usersConnected').fadeIn("slow");
     <!-- CONTENU SECONDAIRE -->
     <div class="secondBlock">
         <div id="usersConnected">
-            <b><u>Utilisateurs connectés :</u></b><br />
+            <b><u>Utilisateurs connectés :</u></b><br/>
             <?php
                 $searchUsers = $db->query('SELECT * FROM users WHERE connected = 1 ORDER BY username');
                 while($userConnected = $searchUsers->fetch(PDO::FETCH_ASSOC)){
                     if($userConnected['admin'] != 0) {
-                        permissions($userConnected['username']);
-                        echo '<br/>';
+                        echo '<b><font color=red>[ADMIN] '.$userConnected['username'].'</font></b><br/>';
                     } else {
                         echo '<b>'.$userConnected['username'].'</b><br/>';
                     }
