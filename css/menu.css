@@ -4,16 +4,18 @@
     grid-template-areas: "menuLeft containerRight";
     grid-area: centre;
 }
-header {
+.header {  
     display: grid;
     grid-area: menuLeft;
     grid-template-areas: "left"
-                        "left" ;
+                          "left" ;
 grid-template-columns: 300px;
 }
 .container{
     grid-area: containerRight;
-    
+}
+.adapteTaille{
+    min-width: 1000px;
 }
 .navigation {   
   grid-area: left;    
@@ -89,5 +91,5 @@ ul  li{
 }
 
 #formAdminChat{
-    padding-left: 4%;
+    padding-left: 3%;
 }

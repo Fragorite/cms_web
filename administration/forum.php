@@ -35,11 +35,12 @@
         $allSubjects = $db->query('SELECT * FROM frm_subjects');
     }
 ?>
+<div class="chatAdmin">
 
-<header class="headerMenu">
+<header class="header">
     <?php include('includes/menu.php'); ?>
-
-    <div class="container">
+</header>
+    <div class="container adapteTaille">
         <?php 
             if(isset($_GET['id']) && !empty($_GET['id'])){
         ?>
@@ -117,6 +118,6 @@
             }
         ?>
     </div>
-</header>
+
 
 

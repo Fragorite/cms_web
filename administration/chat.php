@@ -40,7 +40,7 @@ $('#chat').load('chat.php #chat').fadeIn("slow");
 }, 1000); // REFRESH (en millisecondes)
 </script>
 <div class="chatAdmin">
-<header class="headerMenu">
+<header class="header">
 
     <?php include('includes/menu.php'); ?>
 </header>
@@ -73,5 +73,5 @@ $('#chat').load('chat.php #chat').fadeIn("slow");
             ?>
         </div>
     </div>
-</header>
+
 </div>
