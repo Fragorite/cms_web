@@ -53,6 +53,7 @@ $('#usersConnected').load('chat.php #usersConnected').fadeIn("slow");
             <input type="submit" name="formAddMessage" value="Envoyer">
         </form>
         <hr>
+        <div id="chat" class="firstBlock">
         
             <?php
                 while($chatMessage = $searchChatMessages->fetch(PDO::FETCH_ASSOC)){
@@ -68,7 +69,7 @@ $('#usersConnected').load('chat.php #usersConnected').fadeIn("slow");
             <?php
                 }
             ?>
-        </div>
+        </div></div>
    
     <!-- --------------------- -->
 
