@@ -1,5 +1,28 @@
 <?php include('../includes/config.php'); // Configuration générale ?>
 
+<?php
+    $searchWebsiteConfig = $db->query('SELECT * FROM website');
+    $websiteConfig = $searchWebsiteConfig->fetch(PDO::FETCH_ASSOC);
+    if(isset($_POST['formTemplateChange'])){
+        if(!empty($_POST['templateChoice'])){
+            if(($websiteConfig['template'] == 1 && $_POST['templateChoice'] == "tmp1") || ($websiteConfig['template'] == 2 && $_POST['templateChoice'] == "tmp2")){
+                $error = "Vous devez choisir un template différent de l'actuel.";
+            } else {
+                if($_POST['templateChoice'] == "tmp1"){
+                    $tmp = 1;
+                } else {
+                    $tmp = 2;
+                }
+                $updateWebsiteConfig = $db->query('UPDATE website SET template = "'.$tmp.'"');
+                header('Location: index.php?templateChoice=1');
+            }
+        } else {
+            $error = "Vous devez sélectionner un template.";
+        }
+    }
+
+?>
+
 <header class="headerMenu">
     <?php include('includes/menu.php'); ?>
 
@@ -8,6 +31,7 @@
         <p>
             <form method="POST">
             <center>
+                <div class="error"><?php if(isset($error)){ echo $error; } ?></div>
                 <table>
                     <tr>
                         <td><b>TEMPLATE 1</b></td>
