@@ -11,7 +11,7 @@
 <nav class="navigation">
   <ul class="mainmenu">
     <li><a href="index.php">Accueil</a></li>
-    <li><a href="">Article</a></li>
+    <li><a href="news.php">Article</a></li>
     <li><a href="">Tchat</a>
       <ul class="submenu">
         <li><a href="chat.php">Afficher</a></li>

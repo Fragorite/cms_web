@@ -28,6 +28,16 @@
                     $error = "Vous devez remplir le champs pour poster une réponses !";
                 }
             }
+            if(isset($_GET['deleteAll']) && !empty($_GET['deleteAll'])){
+                $delete = $db->query('DELETE FROM frm_subjects WHERE id = "'.$idSubject.'"');
+                $deleteAnswers = $db->query('DELETE FROM frm_answers WHERE id_subject = "'.$idSubject.'"');
+                header('Location: forum.php?deleteSubject=1');
+            }
+            if(isset($_GET['delete']) && !empty($_GET['delete'])){
+                $idAnswer = intval($_GET['delete']);
+                $delete = $db->query('DELETE FROM frm_answers WHERE id = "'.$idAnswer.'"');
+                header('Location: forum.php?id='.$idSubject.'&deleteAnswerSuccess=1');
+            }
         } else {
             header('Location: forum.php');
         }
@@ -46,6 +56,7 @@
         ?>
             <div class="success">
                 <?php if(isset($_GET['answerAddSuccess']) && $_GET['answerAddSuccess'] == 1) { echo $answerAddSuccess; } ?>
+                <?php if(isset($_GET['deleteAnswerSuccess']) && $_GET['deleteAnswerSuccess'] == 1) { echo $deleteAnswerSuccess; } ?>
             </div>
             <h1>Sujet</h1>
             <h3><?= $subject['title']; ?></h3>
@@ -54,7 +65,7 @@
                 <?php
                 if(isset($userInfo['id']) && $userInfo['id'] == $authorSubject['id']){
                 ?>
-                <a href="#">Modifier</a> | <a href="?id=<?= $idSubject; ?>&delete=1">Supprimer</a>
+                <a href="#">Modifier</a> | <a href="?id=<?= $idSubject; ?>&deleteAll=1">Supprimer</a>
                 <br />
                 <?php } ?>
                 <br/>
@@ -74,13 +85,7 @@
                     <?= $answer['content']; ?>
                     <br />
                     <div class="author">
-                        <?php 
-                            if(isset($userInfo['id']) && $userInfo['id'] == $authorAnswer['id']){
-                        ?>
-                        <a href="forum.php?id=<?= $idSubject; ?>&answerDeleteId=<?= $answer['id']; ?>">Supprimer</a><br />
-                        <?php
-                            }
-                        ?>
+                        <a href="forum.php?id=<?= $idSubject; ?>&delete=<?= $answer['id']; ?>">Supprimer</a><br />
                         Réponse de <b><?= $authorAnswer['username']; ?></b> le <b><?= $answer['date_publication']; ?></b>
                     </div>
                 </fieldset>
@@ -107,6 +112,11 @@
                     $searchAuthor = $db->query('SELECT * FROM users WHERE id = "'.$subjectsFetch['id_user'].'"');
                     $author = $searchAuthor->fetch(PDO::FETCH_ASSOC);
         ?>
+            <div class="success">
+                <?php if(isset($_GET['deleteSubject']) && !empty($_GET['deleteSubject'])) { echo $deleteSubjectSuccess; } ?>
+                <?php if(isset($_GET['deleteAnswer']) && !empty($_GET['deleteAnswer'])) { echo $deleteAnswerSuccess; } ?>
+            </div>
+            <h1>Liste des topics</h1>
             <fieldset>
                 <legend>
                     Auteur : <b><?= $author['username']; ?></b>
