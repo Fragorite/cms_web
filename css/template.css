@@ -25,9 +25,9 @@
 .secondBlock{
      background-color: 7880af;
      padding: 1em;
-     border-top-right-radius: 100px;
+     border-top-right-radius: 60px;
      border-bottom-left-radius: 50px;
-     height:97%;
+     height:94%;
      min-height: 400px;
      order:-1;
      width:85%;
