@@ -47,7 +47,7 @@ $('#chat').load('chat.php #chat').fadeIn("slow");
     
     <div class="container">
         <div class="success"><?php if(isset($_GET['deleted']) && !empty($_GET['deleted'])) { echo $deleteMessageSuccess; } ?></div>
-            <form method="POST">
+            <form method="POST" id="formAdminChat">
                 <input type="text" name="contentAdd" placeholder="Entrez votre message ..."/>
                 <input type="submit" name="formMessageAdd" value="Envoyer"/>
             </form>

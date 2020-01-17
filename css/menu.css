@@ -85,6 +85,9 @@ ul  li{
 .containaer{
     grid-area: centre;
     background-color: #d4d7e5;
-    min-height: 500px;
-    
+    min-height: 500px;   
+}
+
+#formAdminChat{
+    padding-left: 4%;
 }
