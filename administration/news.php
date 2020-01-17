@@ -21,10 +21,10 @@
     }
 
 ?>
-
+<div class="chatAdmin">
 <header class="headerMenu">
     <?php include('includes/menu.php'); ?>
-
+</header>
     <div class="container">
         <?php 
             if(isset($_GET['id']) && !empty($_GET['id'])) { 
@@ -68,6 +68,6 @@
             }
         ?>
     </div>
-</header>
+</div>
 
 

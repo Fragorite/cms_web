@@ -9,13 +9,15 @@
     grid-area: menuLeft;
     grid-template-areas: "left"
                           "left" ;
-grid-template-columns: 300px;
+    grid-template-columns: 300px;
 }
 .container{
     grid-area: containerRight;
+    
 }
 .adapteTaille{
     min-width: 1000px;
+    margin-left: -50px;
 }
 .navigation {   
   grid-area: left;    
@@ -46,7 +48,17 @@ ul  li{
 }
 
 /* add hover behaviour */
-.mainmenu a:hover {
+.mainmenu a:hover{
+    background-color: black;
+    color: whitesmoke;
+}
+
+.container a{
+    text-decoration: none;
+  padding: 10px;
+  color: whitesmoke;
+}
+.container a:hover{
     background-color: black;
     color: whitesmoke;
 }

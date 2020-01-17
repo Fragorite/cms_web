@@ -19,11 +19,11 @@
     }
 
 ?>
-
+<div class="chatAdmin">
 <header class="headerMenu">
     <?php include('includes/menu.php'); ?>
-
-    <div class="container">
+</header>
+    <div class="container adapteTaille">
         <h1>Changer le nom du site</h1>
         <?php if(isset($error)) { echo $error; } ?>
         <form method="POST">
@@ -31,6 +31,6 @@
             <input type="submit" value="Mettre à jour" name="formNameUpdate"/>
         </form>
     </div>
-</header>
+</div>
 
 
