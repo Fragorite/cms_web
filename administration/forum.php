@@ -11,6 +11,23 @@
             $countAnswers = $searchAnswers->rowCount();
             $searchSubjectAuthor = $db->query('SELECT * FROM users WHERE id = "'.$subject['id_user'].'"');
             $authorSubject = $searchSubjectAuthor->fetch(PDO::FETCH_ASSOC);
+            if(isset($_POST['formAnswerAdd'])){
+                if(!empty($_POST['contentAnswerAdd'])){
+                    $contentAdd = htmlspecialchars($_POST['contentAnswerAdd']);
+                    $dateAdd = date('d/m/Y à H:i');
+                    $userAdd = $userInfo['id'];
+                    $insertAnswer = $db->prepare('INSERT INTO frm_answers(content,date_publication,id_user,id_subject) VALUES (:content,:date_publication,:id_user,:id_subject)');
+                    $insertAnswer->execute(array(
+                        'content'               => $contentAdd,
+                        'date_publication'      => $dateAdd,
+                        'id_user'               => $userAdd,
+                        'id_subject'            => $idSubject
+                    ));
+                    header('Location: ?id='.$idSubject.'&answerAddSuccess=1');
+                } else {
+                    $error = "Vous devez remplir le champs pour poster une réponses !";
+                }
+            }
         } else {
             header('Location: forum.php');
         }
@@ -26,6 +43,9 @@
         <?php 
             if(isset($_GET['id']) && !empty($_GET['id'])){
         ?>
+            <div class="success">
+                <?php if(isset($_GET['answerAddSuccess']) && $_GET['answerAddSuccess'] == 1) { echo $answerAddSuccess; } ?>
+            </div>
             <h1>Sujet</h1>
             <h3><?= $subject['title']; ?></h3>
             <p><?= $subject['content']; ?></p><br />
